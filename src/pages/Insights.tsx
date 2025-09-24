@@ -84,9 +84,9 @@ const Insights = () => {
               Insights & Thought Leadership
             </Badge>
             
-            <h1 className="text-enterprise-xl leading-tight">
+            <h1 className="text-bravura-xl leading-tight">
               Expert Insights on 
-              <span className="bg-gradient-primary bg-clip-text text-transparent"> Enterprise Analytics</span>
+              <span className="bg-gradient-lotus bg-clip-text text-transparent"> Enterprise Analytics</span>
             </h1>
             
             <p className="text-xl text-muted-foreground leading-relaxed">
@@ -136,10 +136,10 @@ const Insights = () => {
             <p className="text-muted-foreground">Our latest insights on enterprise data strategy</p>
           </div>
           
-          <Card className="card-enterprise">
+          <Card className="card-lotus relative z-10">
             <CardHeader>
               <div className="flex items-center space-x-2 mb-4">
-                <Badge className="bg-accent text-accent-foreground">Featured</Badge>
+                <Badge className="bg-gold text-accent-foreground">Featured</Badge>
                 <Badge variant="outline">{featuredPost.category}</Badge>
               </div>
               <CardTitle className="text-2xl lg:text-3xl leading-tight">
@@ -162,7 +162,7 @@ const Insights = () => {
                   </div>
                   <span>{featuredPost.readTime}</span>
                 </div>
-                <Button className="btn-primary">
+                <Button className="btn-gold">
                   Read Article
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
@@ -182,7 +182,7 @@ const Insights = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {posts.map((post, index) => (
-              <Card key={index} className="card-enterprise group cursor-pointer">
+              <Card key={index} className="card-lotus group cursor-pointer relative z-10">
                 <CardHeader>
                   <div className="flex items-center space-x-2 mb-3">
                     <Badge variant="outline" className="text-xs">{post.category}</Badge>
@@ -226,7 +226,7 @@ const Insights = () => {
       <section className="py-24 bg-primary text-primary-foreground">
         <div className="container mx-auto px-6 text-center">
           <div className="max-w-3xl mx-auto space-y-8">
-            <h2 className="text-enterprise-lg">Stay Informed</h2>
+            <h2 className="text-bravura-lg">Stay Informed</h2>
             <p className="text-xl opacity-90 leading-relaxed">
               Subscribe to our monthly newsletter for the latest insights, case studies, 
               and strategic perspectives on enterprise data and analytics.
@@ -237,7 +237,7 @@ const Insights = () => {
                 placeholder="Enter your business email"
                 className="flex-1 px-4 py-3 rounded-lg text-primary bg-primary-foreground"
               />
-              <Button size="lg" className="btn-accent text-lg px-8 py-3">
+              <Button size="lg" className="btn-gold text-lg px-8 py-3">
                 Subscribe
               </Button>
             </div>

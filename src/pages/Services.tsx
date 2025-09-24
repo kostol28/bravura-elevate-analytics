@@ -95,9 +95,9 @@ const Services = () => {
               Enterprise Analytics Services
             </Badge>
             
-            <h1 className="text-enterprise-xl leading-tight">
+            <h1 className="text-bravura-xl leading-tight">
               Comprehensive Data Solutions for 
-              <span className="bg-gradient-primary bg-clip-text text-transparent"> Enterprise Scale</span>
+              <span className="bg-gradient-lotus bg-clip-text text-transparent"> Enterprise Scale</span>
             </h1>
             
             <p className="text-xl text-muted-foreground leading-relaxed">
@@ -105,7 +105,7 @@ const Services = () => {
               solutions that transform how Fortune 500 companies leverage their data assets.
             </p>
             
-            <Button size="lg" className="btn-primary text-lg px-10 py-4">
+            <Button size="lg" className="btn-gold text-lg px-10 py-4">
               Discuss Your Project
             </Button>
           </div>
@@ -116,7 +116,7 @@ const Services = () => {
       <section className="py-24 bg-background">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-enterprise-lg mb-6">Core Service Offerings</h2>
+            <h2 className="text-bravura-lg mb-6">Core Service Offerings</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Specialized expertise across the full spectrum of enterprise data and analytics needs
             </p>
@@ -124,9 +124,9 @@ const Services = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="card-enterprise">
+              <Card key={index} className="card-lotus relative z-10">
                 <CardHeader>
-                  <div className="w-16 h-16 bg-gradient-primary rounded-lg flex items-center justify-center text-primary-foreground mb-4">
+                  <div className="w-16 h-16 bg-gradient-lotus rounded-2xl flex items-center justify-center text-primary-foreground mb-4 relative z-10">
                     {service.icon}
                   </div>
                   <CardTitle className="text-xl">{service.title}</CardTitle>
@@ -154,7 +154,7 @@ const Services = () => {
       <section className="py-24 bg-gradient-subtle">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-enterprise-lg mb-6">Our Proven Methodology</h2>
+            <h2 className="text-bravura-lg mb-6">Our Proven Methodology</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               A structured approach that ensures successful delivery and sustainable outcomes
             </p>
@@ -162,10 +162,10 @@ const Services = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {methodology.map((phase, index) => (
-              <Card key={index} className="card-enterprise">
+              <Card key={index} className="card-lotus relative z-10">
                 <CardHeader>
                   <div className="flex items-center space-x-4 mb-4">
-                    <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center text-primary-foreground font-bold text-lg">
+                    <div className="w-12 h-12 bg-gradient-lotus rounded-2xl flex items-center justify-center text-primary-foreground font-bold text-lg relative z-10">
                       {phase.step}
                     </div>
                     <CardTitle className="text-lg">{phase.title}</CardTitle>
@@ -186,7 +186,7 @@ const Services = () => {
       <section className="py-24 bg-background">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-enterprise-lg mb-6">Industry Expertise</h2>
+            <h2 className="text-bravura-lg mb-6">Industry Expertise</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Deep domain knowledge across key enterprise sectors
             </p>
@@ -194,9 +194,9 @@ const Services = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {industries.map((industry, index) => (
-              <Card key={index} className="card-enterprise text-center">
+              <Card key={index} className="card-lotus text-center relative z-10">
                 <CardHeader>
-                  <div className="w-16 h-16 bg-gradient-primary rounded-lg flex items-center justify-center text-primary-foreground mx-auto mb-4">
+                  <div className="w-16 h-16 bg-gradient-lotus rounded-2xl flex items-center justify-center text-primary-foreground mx-auto mb-4 relative z-10">
                     {industry.icon}
                   </div>
                   <CardTitle className="text-lg">{industry.name}</CardTitle>
@@ -216,7 +216,7 @@ const Services = () => {
       <section className="py-24 bg-primary text-primary-foreground">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-enterprise-lg mb-6">Measurable Business Impact</h2>
+            <h2 className="text-bravura-lg mb-6">Measurable Business Impact</h2>
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
               Our clients consistently achieve significant returns on their analytics investments
             </p>
@@ -224,24 +224,24 @@ const Services = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             <div className="text-center space-y-4">
-              <div className="text-5xl font-bold text-accent">40%</div>
+              <div className="text-5xl font-bold text-gold">40%</div>
               <div className="text-lg">Average Cost Reduction</div>
               <div className="text-sm opacity-80">Through process optimization and automation</div>
             </div>
             <div className="text-center space-y-4">
-              <div className="text-5xl font-bold text-accent">6x</div>
+              <div className="text-5xl font-bold text-gold">6x</div>
               <div className="text-lg">Faster Decision Making</div>
               <div className="text-sm opacity-80">With real-time insights and dashboards</div>
             </div>
             <div className="text-center space-y-4">
-              <div className="text-5xl font-bold text-accent">25%</div>
+              <div className="text-5xl font-bold text-gold">25%</div>
               <div className="text-lg">Revenue Growth</div>
               <div className="text-sm opacity-80">From data-driven strategic initiatives</div>
             </div>
           </div>
           
           <div className="text-center">
-            <Button size="lg" className="btn-accent text-lg px-10 py-4 mr-4">
+            <Button size="lg" className="btn-gold text-lg px-10 py-4 mr-4">
               Request ROI Analysis
             </Button>
             <Button variant="outline" size="lg" className="text-lg px-10 py-4 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">

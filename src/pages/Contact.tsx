@@ -61,9 +61,9 @@ const Contact = () => {
               Enterprise Contact
             </Badge>
             
-            <h1 className="text-enterprise-xl leading-tight">
+            <h1 className="text-bravura-xl leading-tight">
               Start Your Data Transformation 
-              <span className="bg-gradient-primary bg-clip-text text-transparent"> Journey Today</span>
+              <span className="bg-gradient-lotus bg-clip-text text-transparent"> Journey Today</span>
             </h1>
             
             <p className="text-xl text-muted-foreground leading-relaxed">
@@ -80,7 +80,7 @@ const Contact = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Contact Form */}
             <div className="lg:col-span-2">
-              <Card className="card-enterprise">
+              <Card className="card-lotus relative z-10">
                 <CardHeader>
                   <CardTitle className="text-2xl">Enterprise Inquiry Form</CardTitle>
                   <CardDescription className="text-base">
@@ -232,7 +232,7 @@ const Contact = () => {
                       />
                     </div>
 
-                    <Button type="submit" size="lg" className="btn-primary w-full text-lg py-4">
+                    <Button type="submit" size="lg" className="btn-gold w-full text-lg py-4">
                       Submit Enterprise Inquiry
                     </Button>
                   </form>
@@ -242,16 +242,16 @@ const Contact = () => {
 
             {/* Contact Information */}
             <div className="space-y-8">
-              <Card className="card-enterprise">
+              <Card className="card-lotus relative z-10">
                 <CardHeader>
                   <CardTitle className="text-xl">Get In Touch</CardTitle>
                   <CardDescription>
                     Multiple ways to connect with our enterprise team
                   </CardDescription>
                 </CardHeader>
-                <CardContent className="space-y-6">
+                <CardContent className="space-y-6 relative z-10">
                   <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
+                    <div className="w-10 h-10 bg-gradient-lotus rounded-2xl flex items-center justify-center relative z-10">
                       <Phone className="w-5 h-5 text-primary-foreground" />
                     </div>
                     <div>
@@ -261,7 +261,7 @@ const Contact = () => {
                   </div>
                   
                   <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
+                    <div className="w-10 h-10 bg-gradient-lotus rounded-2xl flex items-center justify-center relative z-10">
                       <Mail className="w-5 h-5 text-primary-foreground" />
                     </div>
                     <div>
@@ -271,7 +271,7 @@ const Contact = () => {
                   </div>
                   
                   <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
+                    <div className="w-10 h-10 bg-gradient-lotus rounded-2xl flex items-center justify-center relative z-10">
                       <MapPin className="w-5 h-5 text-primary-foreground" />
                     </div>
                     <div>
@@ -284,7 +284,7 @@ const Contact = () => {
                   </div>
                   
                   <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
+                    <div className="w-10 h-10 bg-gradient-lotus rounded-2xl flex items-center justify-center relative z-10">
                       <Clock className="w-5 h-5 text-primary-foreground" />
                     </div>
                     <div>
@@ -295,14 +295,14 @@ const Contact = () => {
                 </CardContent>
               </Card>
 
-              <Card className="card-enterprise">
+              <Card className="card-lotus relative z-10">
                 <CardHeader>
                   <CardTitle className="text-xl">Enterprise Support</CardTitle>
                   <CardDescription>
                     Dedicated support for our enterprise clients
                   </CardDescription>
                 </CardHeader>
-                <CardContent className="space-y-4">
+                <CardContent className="space-y-4 relative z-10">
                   <div className="flex items-center space-x-3">
                     <Shield className="w-5 h-5 text-primary" />
                     <span className="text-sm">24/7 Priority Support</span>
@@ -319,7 +319,7 @@ const Contact = () => {
               </Card>
 
               <div className="text-center">
-                <Button size="lg" className="btn-accent w-full text-lg py-4">
+                <Button size="lg" className="btn-gold w-full text-lg py-4">
                   Schedule Video Call
                 </Button>
               </div>

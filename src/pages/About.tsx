@@ -55,9 +55,9 @@ const About = () => {
               About Bravura Data Works
             </Badge>
             
-            <h1 className="text-enterprise-xl leading-tight">
+            <h1 className="text-bravura-xl leading-tight">
               Pioneering the Future of 
-              <span className="bg-gradient-primary bg-clip-text text-transparent"> Enterprise Analytics</span>
+              <span className="bg-gradient-lotus bg-clip-text text-transparent"> Enterprise Analytics</span>
             </h1>
             
             <p className="text-xl text-muted-foreground leading-relaxed">
@@ -75,7 +75,7 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
               <div>
-                <h2 className="text-enterprise-lg mb-6">Our Mission</h2>
+                <h2 className="text-bravura-lg mb-6">Our Mission</h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   To democratize advanced analytics for enterprise organizations, making sophisticated 
                   data science accessible, secure, and scalable for businesses that demand the highest 
@@ -84,7 +84,7 @@ const About = () => {
               </div>
               
               <div>
-                <h3 className="text-enterprise-md mb-4">Our Vision</h3>
+                <h3 className="text-bravura-md mb-4">Our Vision</h3>
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   A world where every enterprise decision is powered by intelligent, real-time data 
                   insights, driving unprecedented levels of efficiency, innovation, and competitive advantage.
@@ -120,7 +120,7 @@ const About = () => {
       <section className="py-24 bg-gradient-subtle">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-enterprise-lg mb-6">Our Core Values</h2>
+            <h2 className="text-bravura-lg mb-6">Our Core Values</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               The principles that guide every decision, every solution, and every client relationship
             </p>
@@ -128,9 +128,9 @@ const About = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {values.map((value, index) => (
-              <Card key={index} className="card-enterprise">
+              <Card key={index} className="card-lotus relative z-10">
                 <CardHeader>
-                  <div className="w-16 h-16 bg-gradient-primary rounded-lg flex items-center justify-center text-primary-foreground mb-4">
+                  <div className="w-16 h-16 bg-gradient-lotus rounded-2xl flex items-center justify-center text-primary-foreground mb-4 relative z-10">
                     {value.icon}
                   </div>
                   <CardTitle className="text-xl">{value.title}</CardTitle>
@@ -150,7 +150,7 @@ const About = () => {
       <section className="py-24 bg-background">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-enterprise-lg mb-6">Executive Leadership</h2>
+            <h2 className="text-bravura-lg mb-6">Executive Leadership</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Industry veterans with deep expertise in enterprise data, technology, and business strategy
             </p>
@@ -158,9 +158,9 @@ const About = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {leadership.map((leader, index) => (
-              <Card key={index} className="card-enterprise text-center">
+              <Card key={index} className="card-lotus text-center relative z-10">
                 <CardHeader>
-                  <div className="w-24 h-24 bg-gradient-primary rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <div className="w-24 h-24 bg-gradient-lotus rounded-full mx-auto mb-4 flex items-center justify-center relative z-10">
                     <Users className="w-12 h-12 text-primary-foreground" />
                   </div>
                   <CardTitle className="text-xl">{leader.name}</CardTitle>
@@ -209,7 +209,7 @@ const About = () => {
           </div>
           
           <div className="text-center mt-16">
-            <Button size="lg" className="btn-accent text-lg px-10 py-4">
+            <Button size="lg" className="btn-gold text-lg px-10 py-4">
               Schedule a Discovery Call
             </Button>
           </div>
