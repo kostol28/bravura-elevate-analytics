@@ -8,7 +8,7 @@ const Insights = () => {
   
   const featuredPost = {
     title: "The Enterprise Data Governance Revolution: A 2024 Perspective",
-    excerpt: "How Fortune 500 companies are transforming their data governance strategies to unlock competitive advantage while maintaining compliance and security in an increasingly regulated landscape.",
+    excerpt: "How modern businesses are transforming their data governance strategies to unlock competitive advantage while maintaining compliance and security in an increasingly regulated landscape.",
     author: "Dr. Emily Watson",
     date: "December 15, 2024",
     readTime: "8 min read",

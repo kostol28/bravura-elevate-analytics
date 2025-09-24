@@ -31,7 +31,7 @@ const About = () => {
     {
       name: "Sarah Chen",
       role: "Chief Executive Officer",
-      background: "Former VP of Data Strategy at Fortune 100 financial services company"
+      background: "Former Senior Data Strategist with 15+ years in financial services analytics"
     },
     {
       name: "Michael Rodriguez",
@@ -61,9 +61,9 @@ const About = () => {
             </h1>
             
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Founded to bridge the gap between cutting-edge data science and enterprise reliability, 
-              Bravura Data Works has become the trusted partner for Fortune 500 companies 
-              seeking transformational analytics solutions.
+              Founded to bridge the gap between cutting-edge data science and practical business solutions, 
+              Bravura Data Works helps businesses of all sizes unlock the power of their data 
+              with transformational analytics solutions.
             </p>
           </div>
         </div>

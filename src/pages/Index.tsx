@@ -63,7 +63,7 @@ const Index = () => {
         <div className="relative container mx-auto px-6 text-center z-10">
           <div className="max-w-4xl mx-auto space-y-8 animate-fade-in-up">
             <Badge variant="secondary" className="px-6 py-2 text-sm font-medium">
-              Trusted by Fortune 500 Companies
+              Data-Driven Solutions for Growing Businesses
             </Badge>
             
             <h1 className="text-bravura-xl leading-tight">
@@ -72,8 +72,8 @@ const Index = () => {
             </h1>
             
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Partner with Bravura Data Works for enterprise-grade analytics solutions. 
-              We help Fortune 500 companies unlock the power of their data with uncompromising security and reliability.
+              Partner with Bravura Data Works for professional analytics solutions. 
+              We help businesses unlock the power of their data with reliable security and expert insights.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -162,8 +162,8 @@ const Index = () => {
           <div className="max-w-3xl mx-auto space-y-8">
             <h2 className="text-bravura-lg">Ready to Transform Your Data Strategy?</h2>
             <p className="text-xl opacity-90 leading-relaxed">
-              Join hundreds of Fortune 500 companies who trust Bravura Data Works 
-              to deliver enterprise-grade analytics solutions with uncompromising security.
+              Join growing businesses who trust Bravura Data Works 
+              to deliver professional analytics solutions with reliable security and expert guidance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="btn-gold text-lg px-10 py-4">

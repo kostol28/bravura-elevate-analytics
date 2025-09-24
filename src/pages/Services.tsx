@@ -102,7 +102,7 @@ const Services = () => {
             
             <p className="text-xl text-muted-foreground leading-relaxed">
               From strategic consulting to full-scale implementation, we deliver end-to-end analytics 
-              solutions that transform how Fortune 500 companies leverage their data assets.
+              solutions that transform how businesses leverage their data assets for growth.
             </p>
             
             <Button size="lg" className="btn-gold text-lg px-10 py-4">

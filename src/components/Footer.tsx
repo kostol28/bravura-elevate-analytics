@@ -17,8 +17,8 @@ const Footer = () => {
               />
             </div>
             <p className="text-primary-foreground/80 text-sm leading-relaxed">
-              Premium data analytics partner for Fortune 500 enterprises. 
-              Transforming data into competitive advantage with enterprise-grade security and reliability.
+              Data analytics partner helping businesses unlock their potential. 
+              Transforming data into competitive advantage with reliable and secure solutions.
             </p>
             <div className="flex space-x-4">
               <div className="text-xs text-primary-foreground/60">
