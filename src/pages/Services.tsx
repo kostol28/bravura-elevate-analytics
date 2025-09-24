@@ -1,0 +1,257 @@
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Database, BarChart3, Brain, Shield, Cloud, Cog, Building, Heart, ShoppingBag, Banknote, Factory, Plane } from "lucide-react";
+
+const Services = () => {
+  const services = [
+    {
+      icon: <Database className="w-8 h-8" />,
+      title: "Data Engineering",
+      description: "Scalable data pipelines, ETL/ELT processes, and cloud-native architectures for enterprise data workflows",
+      features: ["Real-time data streaming", "Multi-cloud integration", "Data lake architecture", "Performance optimization"]
+    },
+    {
+      icon: <BarChart3 className="w-8 h-8" />,
+      title: "Predictive Analytics",
+      description: "Advanced statistical modeling and machine learning solutions that forecast trends and drive strategic decisions",
+      features: ["Demand forecasting", "Risk assessment", "Customer analytics", "Market intelligence"]
+    },
+    {
+      icon: <Brain className="w-8 h-8" />,
+      title: "AI Prototyping",
+      description: "Rapid development and deployment of AI solutions tailored to your specific business challenges",
+      features: ["Natural language processing", "Computer vision", "Recommendation engines", "Process automation"]
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: "Data Governance",
+      description: "Comprehensive data management frameworks ensuring security, compliance, and quality across your organization",
+      features: ["Privacy compliance", "Data lineage", "Quality monitoring", "Access controls"]
+    },
+    {
+      icon: <Cloud className="w-8 h-8" />,
+      title: "Cloud Migration",
+      description: "Seamless transition of legacy systems to modern cloud platforms with minimal disruption",
+      features: ["Platform assessment", "Migration strategy", "Performance tuning", "Cost optimization"]
+    },
+    {
+      icon: <Cog className="w-8 h-8" />,
+      title: "Integration Services",
+      description: "Connect disparate systems and create unified data ecosystems that power intelligent decision-making",
+      features: ["API development", "System integration", "Real-time sync", "Legacy modernization"]
+    }
+  ];
+
+  const methodology = [
+    {
+      step: "01",
+      title: "Discovery & Assessment",
+      description: "Comprehensive analysis of your current data landscape, challenges, and business objectives"
+    },
+    {
+      step: "02", 
+      title: "Strategy & Planning",
+      description: "Development of detailed roadmap with timelines, resources, and success metrics"
+    },
+    {
+      step: "03",
+      title: "Proof of Concept", 
+      description: "Rapid prototyping to validate approach and demonstrate value before full implementation"
+    },
+    {
+      step: "04",
+      title: "Implementation",
+      description: "Agile development and deployment with continuous stakeholder feedback and iteration"
+    },
+    {
+      step: "05",
+      title: "Testing & Validation",
+      description: "Rigorous quality assurance, performance testing, and security validation"
+    },
+    {
+      step: "06",
+      title: "Launch & Support",
+      description: "Go-live support, user training, and ongoing optimization for sustained success"
+    }
+  ];
+
+  const industries = [
+    { icon: <Building />, name: "Financial Services", description: "Risk analytics & fraud detection" },
+    { icon: <Heart />, name: "Healthcare", description: "Clinical insights & population health" },
+    { icon: <ShoppingBag />, name: "Retail & E-commerce", description: "Customer analytics & personalization" },
+    { icon: <Banknote />, name: "Insurance", description: "Actuarial modeling & claims analytics" },
+    { icon: <Factory />, name: "Manufacturing", description: "Predictive maintenance & quality control" },
+    { icon: <Plane />, name: "Transportation", description: "Route optimization & fleet analytics" }
+  ];
+
+  return (
+    <div className="bg-background">
+      {/* Hero Section */}
+      <section className="py-24 bg-gradient-subtle">
+        <div className="container mx-auto px-6 text-center">
+          <div className="max-w-4xl mx-auto space-y-8">
+            <Badge variant="secondary" className="px-6 py-2 text-sm font-medium">
+              Enterprise Analytics Services
+            </Badge>
+            
+            <h1 className="text-enterprise-xl leading-tight">
+              Comprehensive Data Solutions for 
+              <span className="bg-gradient-primary bg-clip-text text-transparent"> Enterprise Scale</span>
+            </h1>
+            
+            <p className="text-xl text-muted-foreground leading-relaxed">
+              From strategic consulting to full-scale implementation, we deliver end-to-end analytics 
+              solutions that transform how Fortune 500 companies leverage their data assets.
+            </p>
+            
+            <Button size="lg" className="btn-primary text-lg px-10 py-4">
+              Discuss Your Project
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="py-24 bg-background">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-enterprise-lg mb-6">Core Service Offerings</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Specialized expertise across the full spectrum of enterprise data and analytics needs
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <Card key={index} className="card-enterprise">
+                <CardHeader>
+                  <div className="w-16 h-16 bg-gradient-primary rounded-lg flex items-center justify-center text-primary-foreground mb-4">
+                    {service.icon}
+                  </div>
+                  <CardTitle className="text-xl">{service.title}</CardTitle>
+                  <CardDescription className="text-base leading-relaxed">
+                    {service.description}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="text-sm text-muted-foreground flex items-center">
+                        <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3"></div>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Methodology */}
+      <section className="py-24 bg-gradient-subtle">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-enterprise-lg mb-6">Our Proven Methodology</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              A structured approach that ensures successful delivery and sustainable outcomes
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {methodology.map((phase, index) => (
+              <Card key={index} className="card-enterprise">
+                <CardHeader>
+                  <div className="flex items-center space-x-4 mb-4">
+                    <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center text-primary-foreground font-bold text-lg">
+                      {phase.step}
+                    </div>
+                    <CardTitle className="text-lg">{phase.title}</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-base leading-relaxed">
+                    {phase.description}
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Industry Expertise */}
+      <section className="py-24 bg-background">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-enterprise-lg mb-6">Industry Expertise</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Deep domain knowledge across key enterprise sectors
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {industries.map((industry, index) => (
+              <Card key={index} className="card-enterprise text-center">
+                <CardHeader>
+                  <div className="w-16 h-16 bg-gradient-primary rounded-lg flex items-center justify-center text-primary-foreground mx-auto mb-4">
+                    {industry.icon}
+                  </div>
+                  <CardTitle className="text-lg">{industry.name}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-base">
+                    {industry.description}
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ROI Section */}
+      <section className="py-24 bg-primary text-primary-foreground">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-enterprise-lg mb-6">Measurable Business Impact</h2>
+            <p className="text-xl opacity-90 max-w-3xl mx-auto">
+              Our clients consistently achieve significant returns on their analytics investments
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <div className="text-center space-y-4">
+              <div className="text-5xl font-bold text-accent">40%</div>
+              <div className="text-lg">Average Cost Reduction</div>
+              <div className="text-sm opacity-80">Through process optimization and automation</div>
+            </div>
+            <div className="text-center space-y-4">
+              <div className="text-5xl font-bold text-accent">6x</div>
+              <div className="text-lg">Faster Decision Making</div>
+              <div className="text-sm opacity-80">With real-time insights and dashboards</div>
+            </div>
+            <div className="text-center space-y-4">
+              <div className="text-5xl font-bold text-accent">25%</div>
+              <div className="text-lg">Revenue Growth</div>
+              <div className="text-sm opacity-80">From data-driven strategic initiatives</div>
+            </div>
+          </div>
+          
+          <div className="text-center">
+            <Button size="lg" className="btn-accent text-lg px-10 py-4 mr-4">
+              Request ROI Analysis
+            </Button>
+            <Button variant="outline" size="lg" className="text-lg px-10 py-4 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+              View Case Studies
+            </Button>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default Services;
