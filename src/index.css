@@ -8,55 +8,55 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Bravura Brand Color System - Inspired by Logo */
+    /* Bravura Brand Colors - Extracted from Logo */
     --background: 0 0% 100%;
-    --foreground: 200 71% 16%;
+    --foreground: 184 29% 25%;
 
     --card: 0 0% 100%;
-    --card-foreground: 200 71% 16%;
+    --card-foreground: 184 29% 25%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 200 71% 16%;
+    --popover-foreground: 184 29% 25%;
 
-    /* Primary: Deep Navy from Logo */
-    --primary: 200 71% 16%;
+    /* Primary: Deep Navy/Teal from Logo Text */
+    --primary: 184 29% 25%;
     --primary-foreground: 0 0% 98%;
 
-    /* Secondary: Teal Blue */
-    --secondary: 197 65% 28%;
+    /* Secondary: Lighter Teal variation */
+    --secondary: 184 25% 35%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 200 20% 96%;
-    --muted-foreground: 200 30% 50%;
+    --muted: 184 10% 96%;
+    --muted-foreground: 184 15% 50%;
 
-    /* Accent: Golden from Logo Lotus */
-    --accent: 45 85% 60%;
-    --accent-foreground: 200 71% 16%;
+    /* Accent: Warm Gold from Logo Lotus */
+    --accent: 32 38% 65%;
+    --accent-foreground: 184 29% 25%;
 
-    /* Logo Gold Variations */
-    --gold: 45 85% 60%;
-    --gold-light: 45 85% 70%;
-    --gold-dark: 45 85% 50%;
+    /* Logo Gold Variations - Extracted from Lotus Symbol */
+    --gold: 32 38% 65%;
+    --gold-light: 32 38% 75%;
+    --gold-dark: 32 38% 55%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 200 20% 90%;
-    --input: 200 20% 94%;
-    --ring: 200 71% 16%;
+    --border: 184 15% 88%;
+    --input: 184 15% 92%;
+    --ring: 184 29% 25%;
 
-    /* Lotus-Inspired Design Tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(200 71% 16%), hsl(197 65% 28%));
-    --gradient-gold: linear-gradient(135deg, hsl(45 85% 60%), hsl(50 90% 65%));
-    --gradient-lotus: linear-gradient(135deg, hsl(45 85% 60%) 0%, hsl(200 71% 16%) 50%, hsl(197 65% 28%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(200 20% 98%));
+    /* Logo-Inspired Design Tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(184 29% 25%), hsl(184 25% 35%));
+    --gradient-gold: linear-gradient(135deg, hsl(32 38% 65%), hsl(32 38% 75%));
+    --gradient-lotus: linear-gradient(135deg, hsl(32 38% 65%) 0%, hsl(184 29% 25%) 50%, hsl(184 25% 35%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(184 10% 98%));
     
     /* Organic Shadows - Inspired by Lotus Petals */
-    --shadow-lotus: 0 20px 40px -12px hsl(45 85% 60% / 0.25);
-    --shadow-enterprise: 0 20px 40px -12px hsl(200 71% 16% / 0.15);
-    --shadow-card: 0 4px 20px -4px hsl(200 71% 16% / 0.1);
-    --shadow-button: 0 8px 25px -8px hsl(200 71% 16% / 0.3);
-    --shadow-gold: 0 8px 25px -8px hsl(45 85% 60% / 0.4);
+    --shadow-lotus: 0 20px 40px -12px hsl(32 38% 65% / 0.25);
+    --shadow-enterprise: 0 20px 40px -12px hsl(184 29% 25% / 0.15);
+    --shadow-card: 0 4px 20px -4px hsl(184 29% 25% / 0.1);
+    --shadow-button: 0 8px 25px -8px hsl(184 29% 25% / 0.3);
+    --shadow-gold: 0 8px 25px -8px hsl(32 38% 65% / 0.4);
 
     --radius: 0.5rem;
 
@@ -78,32 +78,32 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 200 71% 14%;
+    --background: 184 29% 14%;
     --foreground: 0 0% 98%;
 
-    --card: 200 65% 16%;
+    --card: 184 25% 16%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 200 65% 16%;
+    --popover: 184 25% 16%;
     --popover-foreground: 0 0% 98%;
 
     --primary: 0 0% 98%;
-    --primary-foreground: 200 71% 16%;
+    --primary-foreground: 184 29% 25%;
 
-    --secondary: 197 65% 28%;
+    --secondary: 184 25% 35%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 200 40% 20%;
-    --muted-foreground: 200 20% 70%;
+    --muted: 184 20% 20%;
+    --muted-foreground: 184 15% 70%;
 
-    --accent: 29 59% 60%;
-    --accent-foreground: 200 71% 16%;
+    --accent: 32 38% 65%;
+    --accent-foreground: 184 29% 25%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 200 40% 25%;
-    --input: 200 40% 22%;
+    --border: 184 20% 25%;
+    --input: 184 20% 22%;
     --ring: 0 0% 98%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
@@ -167,7 +167,7 @@ All colors MUST be HSL.
     right: -50%;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle, hsl(45 85% 60% / 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, hsl(32 38% 65% / 0.1) 0%, transparent 70%);
     transform: rotate(45deg);
     transition: all 0.5s ease;
   }
@@ -203,7 +203,7 @@ All colors MUST be HSL.
     position: absolute;
     width: 20px;
     height: 20px;
-    background: hsl(45 85% 60%);
+    background: hsl(32 38% 65%);
     border-radius: 50% 0 50% 0;
     transform: rotate(45deg);
     opacity: 0.8;
