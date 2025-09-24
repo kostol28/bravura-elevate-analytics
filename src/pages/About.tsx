@@ -30,18 +30,18 @@ const About = () => {
   const leadership = [
     {
       name: "Sarah Chen",
-      role: "Chief Executive Officer",
-      background: "Former Senior Data Strategist with 15+ years in financial services analytics"
+      role: "Founder & CEO",
+      background: "Former Data Strategist with 8+ years in financial services, passionate about democratizing analytics"
     },
     {
       name: "Michael Rodriguez",
-      role: "Chief Technology Officer",
-      background: "Ex-Google Principal Engineer with 15+ years in large-scale data systems"
+      role: "Co-Founder & CTO",
+      background: "Software engineer with 10+ years building scalable data platforms at tech startups"
     },
     {
       name: "Dr. Emily Watson",
-      role: "Chief Data Scientist",
-      background: "PhD in Statistics, former Head of Analytics at leading healthcare org"
+      role: "Lead Data Scientist",
+      background: "PhD in Statistics with 6+ years applying machine learning to real-world business problems"
     }
   ];
 
@@ -61,9 +61,9 @@ const About = () => {
             </h1>
             
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Founded to bridge the gap between cutting-edge data science and practical business solutions, 
-              Bravura Data Works helps businesses of all sizes unlock the power of their data 
-              with transformational analytics solutions.
+              Founded by experienced data professionals who saw the gap between advanced analytics and 
+              practical business implementation, Bravura Data Works helps growing businesses unlock 
+              the power of their data with accessible, results-driven solutions.
             </p>
           </div>
         </div>
@@ -77,17 +77,17 @@ const About = () => {
               <div>
                 <h2 className="text-bravura-lg mb-6">Our Mission</h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  To democratize advanced analytics for enterprise organizations, making sophisticated 
-                  data science accessible, secure, and scalable for businesses that demand the highest 
-                  standards of performance and reliability.
+                  To make advanced analytics accessible for growing businesses, providing clear insights 
+                  and practical solutions that drive real business value without the complexity 
+                  typically associated with enterprise data science.
                 </p>
               </div>
               
               <div>
                 <h3 className="text-bravura-md mb-4">Our Vision</h3>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  A world where every enterprise decision is powered by intelligent, real-time data 
-                  insights, driving unprecedented levels of efficiency, innovation, and competitive advantage.
+                  A future where every business, regardless of size, can make confident data-driven 
+                  decisions that fuel growth and create lasting competitive advantages.
                 </p>
               </div>
             </div>
@@ -95,20 +95,20 @@ const About = () => {
             <div className="space-y-6">
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-primary mb-2">500+</div>
-                  <div className="text-muted-foreground">Clients Served</div>
+                  <div className="text-4xl font-bold text-primary mb-2">50+</div>
+                  <div className="text-muted-foreground">Projects Delivered</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-primary mb-2">10+</div>
-                  <div className="text-muted-foreground">Years Experience</div>
+                  <div className="text-4xl font-bold text-primary mb-2">15+</div>
+                  <div className="text-muted-foreground">Years Combined Experience</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-primary mb-2">99.9%</div>
-                  <div className="text-muted-foreground">Uptime SLA</div>
+                  <div className="text-4xl font-bold text-primary mb-2">100%</div>
+                  <div className="text-muted-foreground">Client Satisfaction</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-primary mb-2">24/7</div>
-                  <div className="text-muted-foreground">Enterprise Support</div>
+                  <div className="text-4xl font-bold text-primary mb-2">5★</div>
+                  <div className="text-muted-foreground">Average Rating</div>
                 </div>
               </div>
             </div>
@@ -150,9 +150,9 @@ const About = () => {
       <section className="py-24 bg-background">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-bravura-lg mb-6">Executive Leadership</h2>
+            <h2 className="text-bravura-lg mb-6">Our Team</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Industry veterans with deep expertise in enterprise data, technology, and business strategy
+              Experienced professionals dedicated to helping businesses succeed with data-driven insights
             </p>
           </div>
           
@@ -179,30 +179,30 @@ const About = () => {
         </div>
       </section>
 
-      {/* Certifications & Credentials */}
+      {/* Our Commitment */}
       <section className="py-24 bg-primary text-primary-foreground">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-enterprise-lg mb-6">Enterprise Credentials</h2>
+            <h2 className="text-enterprise-lg mb-6">Our Commitment</h2>
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
-              Certified and compliant with the most stringent industry standards
+              Professional standards and security practices you can trust
             </p>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { icon: <Shield />, title: "SOC 2 Type II", description: "Security & Compliance" },
-              { icon: <Award />, title: "ISO 27001", description: "Information Security" },
-              { icon: <Zap />, title: "GDPR Compliant", description: "Data Protection" },
-              { icon: <Globe />, title: "HIPAA Ready", description: "Healthcare Security" }
-            ].map((cert, index) => (
+              { icon: <Shield />, title: "Data Security", description: "Best Practice Protection" },
+              { icon: <Award />, title: "Quality Delivery", description: "Proven Track Record" },
+              { icon: <Zap />, title: "Rapid Response", description: "Quick Support" },
+              { icon: <Globe />, title: "Scalable Solutions", description: "Growth-Ready Systems" }
+            ].map((commitment, index) => (
               <div key={index} className="text-center space-y-4">
                 <div className="w-16 h-16 bg-accent rounded-lg flex items-center justify-center text-accent-foreground mx-auto">
-                  {cert.icon}
+                  {commitment.icon}
                 </div>
                 <div>
-                  <div className="text-lg font-semibold">{cert.title}</div>
-                  <div className="text-sm opacity-80">{cert.description}</div>
+                  <div className="text-lg font-semibold">{commitment.title}</div>
+                  <div className="text-sm opacity-80">{commitment.description}</div>
                 </div>
               </div>
             ))}
