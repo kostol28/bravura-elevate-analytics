@@ -2,6 +2,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import bravuraLogo from "@/assets/bravura-logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,11 +14,12 @@ const Header = () => {
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <NavLink to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-xl">B</span>
-            </div>
-            <span className="text-enterprise-md text-foreground">Bravura Data Works</span>
+          <NavLink to="/" className="flex items-center space-x-3">
+            <img 
+              src={bravuraLogo} 
+              alt="Bravura Data Works Logo" 
+              className="h-12 w-auto"
+            />
           </NavLink>
 
           {/* Desktop Navigation */}
@@ -72,7 +74,7 @@ const Header = () => {
             >
               Contact
             </NavLink>
-            <Button className="btn-accent">
+            <Button className="btn-gold">
               Book Consultation
             </Button>
           </div>
@@ -126,7 +128,7 @@ const Header = () => {
               Contact
             </NavLink>
             <div className="pt-4">
-              <Button className="btn-accent w-full">
+              <Button className="btn-gold w-full">
                 Book Consultation
               </Button>
             </div>

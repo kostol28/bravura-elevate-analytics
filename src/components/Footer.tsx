@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { Shield, Award, FileCheck, Lock } from "lucide-react";
+import bravuraLogo from "@/assets/bravura-logo.png";
 
 const Footer = () => {
   return (
@@ -8,11 +9,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
-                <span className="text-accent-foreground font-bold text-xl">B</span>
-              </div>
-              <span className="text-xl font-bold">Bravura Data Works</span>
+            <div className="flex items-center space-x-3">
+              <img 
+                src={bravuraLogo} 
+                alt="Bravura Data Works Logo" 
+                className="h-10 w-auto filter brightness-0 invert"
+              />
             </div>
             <p className="text-primary-foreground/80 text-sm leading-relaxed">
               Premium data analytics partner for Fortune 500 enterprises. 

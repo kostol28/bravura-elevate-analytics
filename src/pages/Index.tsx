@@ -66,9 +66,9 @@ const Index = () => {
               Trusted by Fortune 500 Companies
             </Badge>
             
-            <h1 className="text-enterprise-xl leading-tight">
+            <h1 className="text-bravura-xl leading-tight">
               Transform Your Data Into 
-              <span className="bg-gradient-primary bg-clip-text text-transparent"> Competitive Advantage</span>
+              <span className="bg-gradient-lotus bg-clip-text text-transparent"> Competitive Advantage</span>
             </h1>
             
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
@@ -77,10 +77,10 @@ const Index = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" className="btn-primary text-lg px-10 py-4">
+              <Button size="lg" className="btn-gold text-lg px-10 py-4">
                 Book a Consultation
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-10 py-4">
+              <Button variant="outline" size="lg" className="text-lg px-10 py-4 border-primary hover:bg-primary hover:text-primary-foreground">
                 View Case Studies
               </Button>
             </div>
@@ -102,7 +102,7 @@ const Index = () => {
       <section className="py-24 bg-background">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-enterprise-lg mb-6">Enterprise-Grade Capabilities</h2>
+            <h2 className="text-bravura-lg mb-6">Enterprise-Grade Capabilities</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Comprehensive data analytics solutions designed for the most demanding enterprise environments
             </p>
@@ -110,9 +110,9 @@ const Index = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {capabilities.map((capability, index) => (
-              <Card key={index} className="card-enterprise">
+              <Card key={index} className="card-lotus relative z-10">
                 <CardHeader>
-                  <div className="w-16 h-16 bg-gradient-primary rounded-lg flex items-center justify-center text-primary-foreground mb-4">
+                  <div className="w-16 h-16 bg-gradient-lotus rounded-2xl flex items-center justify-center text-primary-foreground mb-4 relative z-10">
                     {capability.icon}
                   </div>
                   <CardTitle className="text-xl">{capability.title}</CardTitle>
@@ -131,7 +131,7 @@ const Index = () => {
       {/* Metrics Section */}
       <section className="py-24 bg-gradient-subtle">
         <div className="container mx-auto px-6 text-center">
-          <h2 className="text-enterprise-lg mb-16">Trusted by Industry Leaders</h2>
+          <h2 className="text-bravura-lg mb-16">Trusted by Industry Leaders</h2>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
             {metrics.map((metric, index) => (
@@ -160,13 +160,13 @@ const Index = () => {
       <section className="py-24 bg-primary text-primary-foreground">
         <div className="container mx-auto px-6 text-center">
           <div className="max-w-3xl mx-auto space-y-8">
-            <h2 className="text-enterprise-lg">Ready to Transform Your Data Strategy?</h2>
+            <h2 className="text-bravura-lg">Ready to Transform Your Data Strategy?</h2>
             <p className="text-xl opacity-90 leading-relaxed">
               Join hundreds of Fortune 500 companies who trust Bravura Data Works 
               to deliver enterprise-grade analytics solutions with uncompromising security.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="btn-accent text-lg px-10 py-4">
+              <Button size="lg" className="btn-gold text-lg px-10 py-4">
                 Schedule Discovery Call
               </Button>
               <Button variant="outline" size="lg" className="text-lg px-10 py-4 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
