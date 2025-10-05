@@ -149,14 +149,9 @@ const Index = () => {
               Join growing businesses who trust Bravura Data Works 
               to deliver professional analytics solutions with reliable security and expert guidance.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="btn-gold text-lg px-10 py-4">
-                Schedule Discovery Call
-              </Button>
-              <Button variant="outline" size="lg" className="text-lg px-10 py-4 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                Download Case Study
-              </Button>
-            </div>
+            <Button size="lg" className="btn-gold text-lg px-10 py-4">
+              Schedule Discovery Call
+            </Button>
           </div>
         </div>
       </section>
