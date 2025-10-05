@@ -38,11 +38,23 @@ const Index = () => {
     }
   ];
 
-  const metrics = [
-    { value: "500+", label: "Enterprise Clients" },
-    { value: "99.9%", label: "Uptime Guarantee" },
-    { value: "24/7", label: "Support Coverage" },
-    { value: "10+", label: "Years Experience" }
+  const whyChooseUs = [
+    {
+      title: "Expert-Led Solutions",
+      description: "Built by senior engineers and analysts with deep domain expertise."
+    },
+    {
+      title: "Agile & Fast",
+      description: "We ship meaningful updates weekly and adapt quickly to your needs."
+    },
+    {
+      title: "Tailored for You",
+      description: "Every solution is crafted to fit your unique goals—no one-size-fits-all templates."
+    },
+    {
+      title: "Founders on the Frontline",
+      description: "You'll work directly with the people building your solution, not a support queue."
+    }
   ];
 
 
@@ -112,30 +124,18 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Metrics Section */}
+      {/* Why Choose Us Section */}
       <section className="py-24 bg-gradient-subtle">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-bravura-lg mb-16">Trusted by Industry Leaders</h2>
+        <div className="container mx-auto px-6">
+          <h2 className="text-bravura-lg mb-16 text-center">Why Choose Us</h2>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-            {metrics.map((metric, index) => (
-              <div key={index} className="space-y-2">
-                <div className="text-5xl font-bold text-primary">{metric.value}</div>
-                <div className="text-lg text-muted-foreground">{metric.label}</div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {whyChooseUs.map((item, index) => (
+              <div key={index} className="text-center space-y-4">
+                <h3 className="text-xl font-bold">{item.title}</h3>
+                <p className="text-muted-foreground leading-relaxed">{item.description}</p>
               </div>
             ))}
-          </div>
-          
-          {/* Client Logos Placeholder */}
-          <div className="space-y-8">
-            <h3 className="text-2xl font-semibold text-muted-foreground">Powering Data-Driven Success</h3>
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center opacity-60">
-              {[1, 2, 3, 4, 5].map((_, index) => (
-                <div key={index} className="h-16 bg-muted rounded-lg flex items-center justify-center">
-                  <span className="text-muted-foreground font-medium">Client Logo</span>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>
