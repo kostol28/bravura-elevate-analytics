@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Shield, Award, FileCheck, Lock, BarChart3, Zap, Users, Globe, TrendingUp, Database } from "lucide-react";
+import { BarChart3, Zap, Users, Globe, TrendingUp, Database, Shield } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
 
 const Index = () => {
@@ -45,12 +45,6 @@ const Index = () => {
     { value: "10+", label: "Years Experience" }
   ];
 
-  const certifications = [
-    { icon: <Shield />, name: "SOC 2" },
-    { icon: <Award />, name: "ISO 27001" },
-    { icon: <FileCheck />, name: "GDPR" },
-    { icon: <Lock />, name: "HIPAA" }
-  ];
 
   return (
     <div className="bg-background">
@@ -83,16 +77,6 @@ const Index = () => {
               <Button variant="outline" size="lg" className="text-lg px-10 py-4 border-primary hover:bg-primary hover:text-primary-foreground">
                 View Case Studies
               </Button>
-            </div>
-            
-            {/* Trust Signals */}
-            <div className="flex flex-wrap justify-center items-center gap-6 pt-8">
-              {certifications.map((cert, index) => (
-                <div key={index} className="flex items-center space-x-2 text-muted-foreground">
-                  <div className="w-5 h-5">{cert.icon}</div>
-                  <span className="text-sm font-medium">{cert.name}</span>
-                </div>
-              ))}
             </div>
           </div>
         </div>
