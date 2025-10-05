@@ -22,6 +22,11 @@ const Index = () => {
       description: "Lightning-fast data processing with 99.9% uptime guarantees"
     },
     {
+      icon: <Users className="w-8 h-8" />,
+      title: "Applied AI",
+      description: "Practical AI solutions that solve real business problems and drive measurable results"
+    },
+    {
       icon: <TrendingUp className="w-8 h-8" />,
       title: "Business Intelligence",
       description: "Actionable insights that transform data into competitive advantage"
