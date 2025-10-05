@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { BarChart3, Zap, Users, Globe, TrendingUp, Database, Shield } from "lucide-react";
+import { BarChart3, Zap, Users, Globe, TrendingUp, Database } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
 
 const Index = () => {
@@ -20,11 +20,6 @@ const Index = () => {
       icon: <Zap className="w-8 h-8" />,
       title: "Real-time Processing",
       description: "Lightning-fast data processing with 99.9% uptime guarantees"
-    },
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Enterprise Security",
-      description: "SOC 2, ISO 27001, GDPR, and HIPAA compliant data handling"
     },
     {
       icon: <TrendingUp className="w-8 h-8" />,
