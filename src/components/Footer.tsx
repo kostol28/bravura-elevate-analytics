@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-import { Shield, Award, FileCheck, Lock } from "lucide-react";
 import bravuraLogo from "@/assets/bravura-logo.png";
 
 const Footer = () => {
@@ -76,35 +75,12 @@ const Footer = () => {
             </nav>
           </div>
 
-          {/* Contact & Certifications */}
+          {/* Contact */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Enterprise Support</h3>
+            <h3 className="text-lg font-semibold">Contact Us</h3>
             <div className="space-y-2 text-sm text-primary-foreground/80">
-              <div>24/7 Enterprise Support</div>
-              <div>enterprise@bravura.com</div>
+              <div>info@bravura.com</div>
               <div>+1 (555) 123-4567</div>
-            </div>
-            
-            <div className="space-y-3">
-              <h4 className="text-sm font-semibold">Security Certifications</h4>
-              <div className="grid grid-cols-2 gap-2">
-                <div className="flex items-center space-x-1 text-xs text-primary-foreground/80">
-                  <Shield size={14} />
-                  <span>SOC 2</span>
-                </div>
-                <div className="flex items-center space-x-1 text-xs text-primary-foreground/80">
-                  <Award size={14} />
-                  <span>ISO 27001</span>
-                </div>
-                <div className="flex items-center space-x-1 text-xs text-primary-foreground/80">
-                  <FileCheck size={14} />
-                  <span>GDPR</span>
-                </div>
-                <div className="flex items-center space-x-1 text-xs text-primary-foreground/80">
-                  <Lock size={14} />
-                  <span>HIPAA</span>
-                </div>
-              </div>
             </div>
           </div>
         </div>
