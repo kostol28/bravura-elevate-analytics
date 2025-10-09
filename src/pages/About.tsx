@@ -60,7 +60,7 @@ const About = () => {
               <span className="bg-gradient-lotus bg-clip-text text-transparent">Data Expertise, Delivered with Clarity</span>
             </h1>
             
-            <p className="text-xl text-muted-foreground leading-relaxed">
+            <p className="text-xl text-primary leading-relaxed">
               We founded Bravura Data Works to make advanced analytics approachable. Our mission: help businesses of every size unlock the full value of their data through secure, results-driven solutions that actually make sense.
             </p>
           </div>
