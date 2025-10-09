@@ -55,16 +55,6 @@ const Header = () => {
               Services
             </NavLink>
             <NavLink 
-              to="/insights" 
-              className={({ isActive }) =>
-                `text-foreground hover:text-primary transition-colors font-medium ${
-                  isActive ? "text-primary" : ""
-                }`
-              }
-            >
-              Insights
-            </NavLink>
-            <NavLink 
               to="/contact" 
               className={({ isActive }) =>
                 `text-foreground hover:text-primary transition-colors font-medium ${
@@ -112,13 +102,6 @@ const Header = () => {
               onClick={toggleMenu}
             >
               Services
-            </NavLink>
-            <NavLink 
-              to="/insights" 
-              className="block text-foreground hover:text-primary transition-colors font-medium py-2"
-              onClick={toggleMenu}
-            >
-              Insights
             </NavLink>
             <NavLink 
               to="/contact" 
