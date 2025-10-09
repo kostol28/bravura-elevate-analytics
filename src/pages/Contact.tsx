@@ -241,7 +241,7 @@ const Contact = () => {
                     </div>
 
                     <Button type="submit" size="lg" className="btn-gold w-full text-lg py-4">
-                      Submit Enterprise Inquiry
+                      Submit Inquiry
                     </Button>
                   </form>
                 </CardContent>
