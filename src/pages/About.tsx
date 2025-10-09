@@ -73,7 +73,7 @@ const About = () => {
           <div className="space-y-16 max-w-4xl mx-auto text-center">
             <div>
               <h2 className="text-bravura-lg mb-6">Our Mission</h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-lg text-primary leading-relaxed">
                 To make advanced analytics accessible for growing businesses, providing clear insights 
                 and practical solutions that drive real business value without the complexity 
                 typically associated with enterprise data science.
