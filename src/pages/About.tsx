@@ -25,7 +25,7 @@ const About = () => {
 
   const leadership = [
     {
-      name: "Data Architect & Engineer",
+      name: "Logan Kostos",
       role: "Data Architect & Engineer",
       background: "Expert in data pipeline design, cloud integration, and analytics automation for measurable, real-world results."
     },
