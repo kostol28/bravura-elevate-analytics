@@ -82,7 +82,7 @@ const About = () => {
             
             <div>
               <h2 className="text-bravura-lg mb-6">Our Vision</h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-lg text-primary leading-relaxed">
                 A future where every business, regardless of size, can make confident data-driven 
                 decisions that fuel growth and create lasting competitive advantages.
               </p>
