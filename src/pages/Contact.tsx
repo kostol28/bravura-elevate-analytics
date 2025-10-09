@@ -22,7 +22,7 @@ const Contact = () => {
     projectType: "",
     budget: "",
     timeline: "",
-    message: ""
+    message: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -43,12 +43,12 @@ const Contact = () => {
       projectType: "",
       budget: "",
       timeline: "",
-      message: ""
+      message: "",
     });
   };
 
   const handleInputChange = (field: string, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
+    setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
   return (
@@ -60,15 +60,14 @@ const Contact = () => {
             <Badge variant="secondary" className="px-6 py-2 text-sm font-medium">
               Enterprise Contact
             </Badge>
-            
+
             <h1 className="text-bravura-xl leading-tight">
-              Start Your Data Transformation 
+              Start Your Data Transformation
               <span className="bg-gradient-lotus bg-clip-text text-transparent"> Journey Today</span>
             </h1>
-            
+
             <p className="text-xl text-primary leading-relaxed">
-              Connect with our enterprise solutions team to discuss your data analytics needs. 
-              We'll provide a customized assessment and roadmap within 48 hours.
+              Connect with our enterprise solutions team to discuss your data analytics needs.
             </p>
           </div>
         </div>
@@ -156,7 +155,10 @@ const Contact = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="space-y-2">
                         <Label htmlFor="industry">Industry</Label>
-                        <Select value={formData.industry} onValueChange={(value) => handleInputChange("industry", value)}>
+                        <Select
+                          value={formData.industry}
+                          onValueChange={(value) => handleInputChange("industry", value)}
+                        >
                           <SelectTrigger>
                             <SelectValue placeholder="Select your industry" />
                           </SelectTrigger>
@@ -172,7 +174,10 @@ const Contact = () => {
                       </div>
                       <div className="space-y-2">
                         <Label htmlFor="projectType">Project Type</Label>
-                        <Select value={formData.projectType} onValueChange={(value) => handleInputChange("projectType", value)}>
+                        <Select
+                          value={formData.projectType}
+                          onValueChange={(value) => handleInputChange("projectType", value)}
+                        >
                           <SelectTrigger>
                             <SelectValue placeholder="Select project type" />
                           </SelectTrigger>
@@ -206,7 +211,10 @@ const Contact = () => {
                       </div>
                       <div className="space-y-2">
                         <Label htmlFor="timeline">Timeline</Label>
-                        <Select value={formData.timeline} onValueChange={(value) => handleInputChange("timeline", value)}>
+                        <Select
+                          value={formData.timeline}
+                          onValueChange={(value) => handleInputChange("timeline", value)}
+                        >
                           <SelectTrigger>
                             <SelectValue placeholder="Select timeline" />
                           </SelectTrigger>
@@ -245,9 +253,7 @@ const Contact = () => {
               <Card className="card-lotus relative z-10">
                 <CardHeader>
                   <CardTitle className="text-xl">Get In Touch</CardTitle>
-                  <CardDescription>
-                    Multiple ways to connect with our enterprise team
-                  </CardDescription>
+                  <CardDescription>Multiple ways to connect with our enterprise team</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-6 relative z-10">
                   <div className="flex items-center space-x-3">
@@ -259,7 +265,7 @@ const Contact = () => {
                       <div className="text-sm text-muted-foreground">+1 (555) 123-4567</div>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-center space-x-3">
                     <div className="w-10 h-10 bg-gradient-lotus rounded-2xl flex items-center justify-center relative z-10">
                       <Mail className="w-5 h-5 text-primary-foreground" />
@@ -269,7 +275,7 @@ const Contact = () => {
                       <div className="text-sm text-muted-foreground">enterprise@bravura.com</div>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-center space-x-3">
                     <div className="w-10 h-10 bg-gradient-lotus rounded-2xl flex items-center justify-center relative z-10">
                       <MapPin className="w-5 h-5 text-primary-foreground" />
@@ -277,12 +283,13 @@ const Contact = () => {
                     <div>
                       <div className="font-medium">Headquarters</div>
                       <div className="text-sm text-muted-foreground">
-                        123 Data Drive<br />
+                        123 Data Drive
+                        <br />
                         San Francisco, CA 94105
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-center space-x-3">
                     <div className="w-10 h-10 bg-gradient-lotus rounded-2xl flex items-center justify-center relative z-10">
                       <Clock className="w-5 h-5 text-primary-foreground" />
@@ -298,9 +305,7 @@ const Contact = () => {
               <Card className="card-lotus relative z-10">
                 <CardHeader>
                   <CardTitle className="text-xl">Enterprise Support</CardTitle>
-                  <CardDescription>
-                    Dedicated support for our enterprise clients
-                  </CardDescription>
+                  <CardDescription>Dedicated support for our enterprise clients</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4 relative z-10">
                   <div className="flex items-center space-x-3">
