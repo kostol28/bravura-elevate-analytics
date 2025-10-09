@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { BarChart3, Zap, Users, Globe, TrendingUp, Database } from "lucide-react";
-import bravuraLogo from "@/assets/bravura-logo.png";
+import lotusPattern from "@/assets/lotus-pattern.svg";
 
 const Index = () => {
   const capabilities = [
@@ -63,8 +63,11 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-subtle overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
-          style={{ backgroundImage: `url(${bravuraLogo})` }}
+          className="absolute inset-0 bg-repeat opacity-10"
+          style={{ 
+            backgroundImage: `url(${lotusPattern})`,
+            backgroundSize: '200px 200px'
+          }}
         />
         <div className="relative container mx-auto px-6 text-center z-10">
           <div className="max-w-4xl mx-auto space-y-8 animate-fade-in-up">
