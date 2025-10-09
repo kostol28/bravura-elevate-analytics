@@ -77,7 +77,7 @@ const Index = () => {
               <span className="bg-gradient-lotus bg-clip-text text-transparent"> Competitive Advantage</span>
             </h1>
             
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xl text-primary max-w-2xl mx-auto leading-relaxed">
               We meet you where you are and take you further. Discover insights you didn't know were possible with Bravura Dataworks.
             </p>
             <p className="text-xl font-bold max-w-2xl mx-auto animate-shine">
