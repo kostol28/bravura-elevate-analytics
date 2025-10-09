@@ -234,6 +234,15 @@ All colors MUST be HSL.
   .animate-fade-in-left {
     animation: fadeInLeft 0.6s ease-out forwards;
   }
+
+  .animate-shine {
+    background: linear-gradient(90deg, currentColor 0%, hsl(39 62% 61%) 50%, currentColor 100%);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s linear infinite;
+  }
 }
 
 @keyframes fadeInUp {
@@ -255,5 +264,11 @@ All colors MUST be HSL.
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
   }
 }
