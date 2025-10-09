@@ -34,11 +34,6 @@ const About = () => {
       role: "Co-Founder and Chief Relationship Officer",
       background: "Oversees client partnerships and strategic growth initiatives, combining analytical insight with a people-first approach to foster lasting relationships."
     },
-    {
-      name: "Dr. Emily Watson",
-      role: "Lead Data Scientist",
-      background: "PhD in Statistics with 6+ years applying machine learning to real-world business problems"
-    }
   ];
 
   return (
@@ -128,7 +123,7 @@ const About = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {leadership.map((leader, index) => (
               <Card key={index} className="card-lotus text-center relative z-10">
                 <CardHeader>
