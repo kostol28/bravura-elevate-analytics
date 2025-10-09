@@ -20,11 +20,6 @@ const About = () => {
       icon: <Users className="w-8 h-8" />,
       title: "Partnership Approach",
       description: "We become an extension of your team, not just another vendor"
-    },
-    {
-      icon: <Globe className="w-8 h-8" />,
-      title: "Global Scale",
-      description: "Proven capability to handle enterprise deployments across multiple regions"
     }
   ];
 
@@ -102,7 +97,7 @@ const About = () => {
               </p>
             </div>
           
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {values.map((value, index) => (
                 <Card key={index} className="card-lotus relative z-10">
                   <CardHeader>
