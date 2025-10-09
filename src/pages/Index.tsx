@@ -67,7 +67,7 @@ const Index = () => {
           style={{ 
             backgroundImage: `url(${lotusPattern})`,
             backgroundSize: '150%',
-            backgroundPosition: 'right center'
+            backgroundPosition: 'calc(100% + 37.5%) center'
           }}
         />
         <div className="relative container mx-auto px-6 text-center z-10">
