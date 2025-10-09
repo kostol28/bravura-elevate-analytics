@@ -56,14 +56,11 @@ const About = () => {
             </Badge>
             
             <h1 className="text-bravura-xl leading-tight">
-              Pioneering the Future of 
-              <span className="bg-gradient-lotus bg-clip-text text-transparent"> Enterprise Analytics</span>
+              Data Expertise, Delivered with Clarity
             </h1>
             
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Founded by experienced data professionals who saw the gap between advanced analytics and 
-              practical business implementation, Bravura Data Works helps growing businesses unlock 
-              the power of their data with accessible, results-driven solutions.
+              We founded Bravura Data Works to make advanced analytics approachable. Our mission: help businesses of every size unlock the full value of their data through secure, results-driven solutions that actually make sense.
             </p>
           </div>
         </div>
