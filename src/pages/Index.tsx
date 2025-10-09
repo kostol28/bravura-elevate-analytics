@@ -88,9 +88,6 @@ const Index = () => {
               <Button size="lg" className="btn-gold text-lg px-10 py-4">
                 Book a Consultation
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-10 py-4 border-primary hover:bg-primary hover:text-primary-foreground">
-                View Case Studies
-              </Button>
             </div>
           </div>
         </div>
