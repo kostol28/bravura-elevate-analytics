@@ -30,9 +30,9 @@ const About = () => {
       background: "Expert in data pipeline design, cloud integration, and analytics automation for measurable, real-world results."
     },
     {
-      name: "Michael Rodriguez",
-      role: "Co-Founder & CTO",
-      background: "Software engineer with 10+ years building scalable data platforms at tech startups"
+      name: "Leah Kostos",
+      role: "Co-Founder and Chief Relationship Officer",
+      background: "Oversees client partnerships and strategic growth initiatives, combining analytical insight with a people-first approach to foster lasting relationships."
     },
     {
       name: "Dr. Emily Watson",
