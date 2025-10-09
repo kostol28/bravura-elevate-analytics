@@ -5,42 +5,39 @@ import { Button } from "@/components/ui/button";
 import { Shield, Award, Users, Target, Globe, Zap } from "lucide-react";
 
 
-const useScrollZoom = () => {
-  const [scale, setScale] = useState(0.9);
+const useScrollReveal = () => {
+  const [opacity, setOpacity] = useState(0);
+  const [translateY, setTranslateY] = useState(30);
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setScale(1);
-          } else {
-            setScale(0.9);
-          }
-        });
-      },
-      { threshold: 0.3 }
-    );
-
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => {
+    const handleScroll = () => {
       if (ref.current) {
-        observer.unobserve(ref.current);
+        const rect = ref.current.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        const elementTop = rect.top;
+        
+        // Calculate progress (0 to 1) based on element position
+        const progress = Math.max(0, Math.min(1, (windowHeight - elementTop) / (windowHeight * 0.5)));
+        
+        setOpacity(progress);
+        setTranslateY(30 * (1 - progress));
       }
     };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial call
+
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  return { ref, scale };
+  return { ref, opacity, translateY };
 };
 
 const About = () => {
-  const missionZoom = useScrollZoom();
-  const visionZoom = useScrollZoom();
-  const valuesZoom = useScrollZoom();
+  const missionReveal = useScrollReveal();
+  const visionReveal = useScrollReveal();
+  const valuesReveal = useScrollReveal();
 
   const values = [
     {
@@ -108,33 +105,39 @@ const About = () => {
       <section className="py-24 bg-background">
         <div className="container mx-auto px-6">
           <div className="space-y-16 max-w-4xl mx-auto">
-            <div 
-              ref={missionZoom.ref}
-              style={{ 
-                transform: `scale(${missionZoom.scale})`,
-                transition: 'transform 0.6s ease-out'
-              }}
-            >
+            <div>
               <h2 className="text-bravura-lg mb-6">Our Mission</h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                To make advanced analytics accessible for growing businesses, providing clear insights 
-                and practical solutions that drive real business value without the complexity 
-                typically associated with enterprise data science.
-              </p>
+              <div 
+                ref={missionReveal.ref}
+                style={{ 
+                  opacity: missionReveal.opacity,
+                  transform: `translateY(${missionReveal.translateY}px)`,
+                  transition: 'opacity 0.3s ease-out, transform 0.3s ease-out'
+                }}
+              >
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  To make advanced analytics accessible for growing businesses, providing clear insights 
+                  and practical solutions that drive real business value without the complexity 
+                  typically associated with enterprise data science.
+                </p>
+              </div>
             </div>
             
-            <div 
-              ref={visionZoom.ref}
-              style={{ 
-                transform: `scale(${visionZoom.scale})`,
-                transition: 'transform 0.6s ease-out'
-              }}
-            >
-              <h3 className="text-bravura-md mb-4">Our Vision</h3>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                A future where every business, regardless of size, can make confident data-driven 
-                decisions that fuel growth and create lasting competitive advantages.
-              </p>
+            <div>
+              <h2 className="text-bravura-lg mb-6">Our Vision</h2>
+              <div 
+                ref={visionReveal.ref}
+                style={{ 
+                  opacity: visionReveal.opacity,
+                  transform: `translateY(${visionReveal.translateY}px)`,
+                  transition: 'opacity 0.3s ease-out, transform 0.3s ease-out'
+                }}
+              >
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  A future where every business, regardless of size, can make confident data-driven 
+                  decisions that fuel growth and create lasting competitive advantages.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -143,21 +146,31 @@ const About = () => {
       {/* Core Values */}
       <section className="py-24 bg-gradient-subtle">
         <div className="container mx-auto px-6">
-          <div 
-            ref={valuesZoom.ref}
-            style={{ 
-              transform: `scale(${valuesZoom.scale})`,
-              transition: 'transform 0.6s ease-out'
-            }}
-          >
+          <div>
             <div className="text-center mb-16">
               <h2 className="text-bravura-lg mb-6">Our Core Values</h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                The principles that guide every decision, every solution, and every client relationship
-              </p>
+              <div 
+                ref={valuesReveal.ref}
+                style={{ 
+                  opacity: valuesReveal.opacity,
+                  transform: `translateY(${valuesReveal.translateY}px)`,
+                  transition: 'opacity 0.3s ease-out, transform 0.3s ease-out'
+                }}
+              >
+                <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                  The principles that guide every decision, every solution, and every client relationship
+                </p>
+              </div>
             </div>
           
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div 
+              style={{ 
+                opacity: valuesReveal.opacity,
+                transform: `translateY(${valuesReveal.translateY}px)`,
+                transition: 'opacity 0.3s ease-out, transform 0.3s ease-out'
+              }}
+              className="grid grid-cols-1 md:grid-cols-2 gap-8"
+            >
               {values.map((value, index) => (
                 <Card key={index} className="card-lotus relative z-10">
                   <CardHeader>
