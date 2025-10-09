@@ -101,7 +101,7 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-bravura-lg mb-6">Enterprise-Grade Capabilities</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-primary max-w-3xl mx-auto">
               Comprehensive data analytics solutions designed for the most demanding enterprise environments
             </p>
           </div>

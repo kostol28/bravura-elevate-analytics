@@ -97,7 +97,7 @@ const About = () => {
           <div>
             <div className="text-center mb-16">
               <h2 className="text-bravura-lg mb-6">Our Core Values</h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              <p className="text-xl text-primary max-w-3xl mx-auto">
                 The principles that guide every decision, every solution, and every client relationship
               </p>
             </div>
@@ -128,7 +128,7 @@ const About = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-bravura-lg mb-6">Our Team</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-primary max-w-3xl mx-auto">
               Experienced professionals dedicated to helping businesses succeed with data-driven insights
             </p>
           </div>

@@ -117,7 +117,7 @@ const Services = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-bravura-lg mb-6">Core Service Offerings</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-primary max-w-3xl mx-auto">
               Specialized expertise across the full spectrum of enterprise data and analytics needs
             </p>
           </div>
@@ -155,7 +155,7 @@ const Services = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-bravura-lg mb-6">Our Proven Methodology</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-primary max-w-3xl mx-auto">
               A structured approach that ensures successful delivery and sustainable outcomes
             </p>
           </div>
@@ -187,7 +187,7 @@ const Services = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-bravura-lg mb-6">Industry Expertise</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-primary max-w-3xl mx-auto">
               Deep domain knowledge across key enterprise sectors
             </p>
           </div>
