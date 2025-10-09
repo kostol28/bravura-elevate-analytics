@@ -63,10 +63,10 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-subtle overflow-hidden">
         <div 
-          className="absolute inset-0 bg-repeat opacity-10"
+          className="absolute inset-0 bg-repeat opacity-5"
           style={{ 
             backgroundImage: `url(${lotusPattern})`,
-            backgroundSize: '200px 200px'
+            backgroundSize: '400px 400px'
           }}
         />
         <div className="relative container mx-auto px-6 text-center z-10">
