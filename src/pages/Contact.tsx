@@ -66,7 +66,7 @@ const Contact = () => {
               <span className="bg-gradient-lotus bg-clip-text text-transparent"> Journey Today</span>
             </h1>
             
-            <p className="text-xl text-muted-foreground leading-relaxed">
+            <p className="text-xl text-primary leading-relaxed">
               Connect with our enterprise solutions team to discuss your data analytics needs. 
               We'll provide a customized assessment and roadmap within 48 hours.
             </p>
