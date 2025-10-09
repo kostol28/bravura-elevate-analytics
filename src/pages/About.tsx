@@ -25,9 +25,9 @@ const About = () => {
 
   const leadership = [
     {
-      name: "Sarah Chen",
-      role: "Founder & CEO",
-      background: "Former Data Strategist with 8+ years in financial services, passionate about democratizing analytics"
+      name: "Data Architect & Engineer",
+      role: "Data Architect & Engineer",
+      background: "Expert in data pipeline design, cloud integration, and analytics automation for measurable, real-world results."
     },
     {
       name: "Michael Rodriguez",
