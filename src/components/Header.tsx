@@ -18,7 +18,7 @@ const Header = () => {
             <img 
               src={bravuraLogo} 
               alt="Bravura Data Works Logo" 
-              className="h-12 w-auto"
+              className="h-16 w-auto md:h-20 transition-transform hover:scale-105"
             />
           </NavLink>
 
