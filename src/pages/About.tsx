@@ -1,9 +1,47 @@
+import { useEffect, useRef, useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Shield, Award, Users, Target, Globe, Zap } from "lucide-react";
 
+
+const useScrollZoom = () => {
+  const [scale, setScale] = useState(0.9);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setScale(1);
+          } else {
+            setScale(0.9);
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, []);
+
+  return { ref, scale };
+};
+
 const About = () => {
+  const missionZoom = useScrollZoom();
+  const visionZoom = useScrollZoom();
+  const valuesZoom = useScrollZoom();
+
   const values = [
     {
       icon: <Shield className="w-8 h-8" />,
@@ -69,45 +107,34 @@ const About = () => {
       {/* Mission & Vision */}
       <section className="py-24 bg-background">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8">
-              <div>
-                <h2 className="text-bravura-lg mb-6">Our Mission</h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  To make advanced analytics accessible for growing businesses, providing clear insights 
-                  and practical solutions that drive real business value without the complexity 
-                  typically associated with enterprise data science.
-                </p>
-              </div>
-              
-              <div>
-                <h3 className="text-bravura-md mb-4">Our Vision</h3>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  A future where every business, regardless of size, can make confident data-driven 
-                  decisions that fuel growth and create lasting competitive advantages.
-                </p>
-              </div>
+          <div className="space-y-16 max-w-4xl mx-auto">
+            <div 
+              ref={missionZoom.ref}
+              style={{ 
+                transform: `scale(${missionZoom.scale})`,
+                transition: 'transform 0.6s ease-out'
+              }}
+            >
+              <h2 className="text-bravura-lg mb-6">Our Mission</h2>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                To make advanced analytics accessible for growing businesses, providing clear insights 
+                and practical solutions that drive real business value without the complexity 
+                typically associated with enterprise data science.
+              </p>
             </div>
             
-            <div className="space-y-6">
-              <div className="grid grid-cols-2 gap-6">
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-primary mb-2">50+</div>
-                  <div className="text-muted-foreground">Projects Delivered</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-primary mb-2">15+</div>
-                  <div className="text-muted-foreground">Years Combined Experience</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-primary mb-2">100%</div>
-                  <div className="text-muted-foreground">Client Satisfaction</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-primary mb-2">5★</div>
-                  <div className="text-muted-foreground">Average Rating</div>
-                </div>
-              </div>
+            <div 
+              ref={visionZoom.ref}
+              style={{ 
+                transform: `scale(${visionZoom.scale})`,
+                transition: 'transform 0.6s ease-out'
+              }}
+            >
+              <h3 className="text-bravura-md mb-4">Our Vision</h3>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                A future where every business, regardless of size, can make confident data-driven 
+                decisions that fuel growth and create lasting competitive advantages.
+              </p>
             </div>
           </div>
         </div>
@@ -116,29 +143,37 @@ const About = () => {
       {/* Core Values */}
       <section className="py-24 bg-gradient-subtle">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-bravura-lg mb-6">Our Core Values</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              The principles that guide every decision, every solution, and every client relationship
-            </p>
-          </div>
+          <div 
+            ref={valuesZoom.ref}
+            style={{ 
+              transform: `scale(${valuesZoom.scale})`,
+              transition: 'transform 0.6s ease-out'
+            }}
+          >
+            <div className="text-center mb-16">
+              <h2 className="text-bravura-lg mb-6">Our Core Values</h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                The principles that guide every decision, every solution, and every client relationship
+              </p>
+            </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {values.map((value, index) => (
-              <Card key={index} className="card-lotus relative z-10">
-                <CardHeader>
-                  <div className="w-16 h-16 bg-gradient-lotus rounded-2xl flex items-center justify-center text-primary-foreground mb-4 relative z-10">
-                    {value.icon}
-                  </div>
-                  <CardTitle className="text-xl">{value.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-base leading-relaxed">
-                    {value.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            ))}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {values.map((value, index) => (
+                <Card key={index} className="card-lotus relative z-10">
+                  <CardHeader>
+                    <div className="w-16 h-16 bg-gradient-lotus rounded-2xl flex items-center justify-center text-primary-foreground mb-4 relative z-10">
+                      {value.icon}
+                    </div>
+                    <CardTitle className="text-xl">{value.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription className="text-base leading-relaxed">
+                      {value.description}
+                    </CardDescription>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
       </section>
