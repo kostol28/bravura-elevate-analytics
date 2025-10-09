@@ -78,8 +78,8 @@ const Index = () => {
             </h1>
             
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Partner with Bravura Data Works for professional analytics solutions. 
-              We help businesses unlock the power of their data with reliable security and expert insights.
+              We meet you where you are and take you further. Discover insights you didn't know were possible with Bravura Dataworks.
+              Streamline. Optimize. Modernize.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
