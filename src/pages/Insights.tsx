@@ -89,7 +89,7 @@ const Insights = () => {
               <span className="bg-gradient-lotus bg-clip-text text-transparent"> Enterprise Analytics</span>
             </h1>
             
-            <p className="text-xl text-muted-foreground leading-relaxed">
+            <p className="text-xl text-primary leading-relaxed">
               Stay ahead of the curve with cutting-edge perspectives, case studies, and strategic guidance 
               from our team of data science and analytics experts.
             </p>
