@@ -79,6 +79,8 @@ const Index = () => {
             
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               We meet you where you are and take you further. Discover insights you didn't know were possible with Bravura Dataworks.
+            </p>
+            <p className="text-xl font-bold max-w-2xl mx-auto">
               Streamline. Optimize. Modernize.
             </p>
             
