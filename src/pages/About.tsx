@@ -5,9 +5,9 @@ import { Button } from "@/components/ui/button";
 import { Shield, Award, Users, Target, Globe, Zap } from "lucide-react";
 
 
-const useScrollReveal = () => {
+const useScrollReveal = (direction: 'left' | 'right') => {
   const [opacity, setOpacity] = useState(0);
-  const [translateY, setTranslateY] = useState(30);
+  const [translateX, setTranslateX] = useState(direction === 'left' ? -100 : 100);
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -21,7 +21,8 @@ const useScrollReveal = () => {
         const progress = Math.max(0, Math.min(1, (windowHeight - elementTop) / (windowHeight * 0.5)));
         
         setOpacity(progress);
-        setTranslateY(30 * (1 - progress));
+        const baseOffset = direction === 'left' ? -100 : 100;
+        setTranslateX(baseOffset * (1 - progress));
       }
     };
 
@@ -29,15 +30,18 @@ const useScrollReveal = () => {
     handleScroll(); // Initial call
 
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [direction]);
 
-  return { ref, opacity, translateY };
+  return { ref, opacity, translateX };
 };
 
 const About = () => {
-  const missionReveal = useScrollReveal();
-  const visionReveal = useScrollReveal();
-  const valuesReveal = useScrollReveal();
+  const missionHeadline = useScrollReveal('left');
+  const missionBody = useScrollReveal('right');
+  const visionHeadline = useScrollReveal('left');
+  const visionBody = useScrollReveal('right');
+  const valuesHeadline = useScrollReveal('left');
+  const valuesBody = useScrollReveal('right');
 
   const values = [
     {
@@ -104,15 +108,24 @@ const About = () => {
       {/* Mission & Vision */}
       <section className="py-24 bg-background">
         <div className="container mx-auto px-6">
-          <div className="space-y-16 max-w-4xl mx-auto">
+          <div className="space-y-16 max-w-4xl mx-auto text-center">
             <div>
-              <h2 className="text-bravura-lg mb-6">Our Mission</h2>
               <div 
-                ref={missionReveal.ref}
+                ref={missionHeadline.ref}
                 style={{ 
-                  opacity: missionReveal.opacity,
-                  transform: `translateY(${missionReveal.translateY}px)`,
-                  transition: 'opacity 0.3s ease-out, transform 0.3s ease-out'
+                  opacity: missionHeadline.opacity,
+                  transform: `translateX(${missionHeadline.translateX}px)`,
+                  transition: 'opacity 0.6s ease-out, transform 0.6s ease-out'
+                }}
+              >
+                <h2 className="text-bravura-lg mb-6">Our Mission</h2>
+              </div>
+              <div 
+                ref={missionBody.ref}
+                style={{ 
+                  opacity: missionBody.opacity,
+                  transform: `translateX(${missionBody.translateX}px)`,
+                  transition: 'opacity 0.6s ease-out, transform 0.6s ease-out'
                 }}
               >
                 <p className="text-lg text-muted-foreground leading-relaxed">
@@ -124,13 +137,22 @@ const About = () => {
             </div>
             
             <div>
-              <h2 className="text-bravura-lg mb-6">Our Vision</h2>
               <div 
-                ref={visionReveal.ref}
+                ref={visionHeadline.ref}
                 style={{ 
-                  opacity: visionReveal.opacity,
-                  transform: `translateY(${visionReveal.translateY}px)`,
-                  transition: 'opacity 0.3s ease-out, transform 0.3s ease-out'
+                  opacity: visionHeadline.opacity,
+                  transform: `translateX(${visionHeadline.translateX}px)`,
+                  transition: 'opacity 0.6s ease-out, transform 0.6s ease-out'
+                }}
+              >
+                <h2 className="text-bravura-lg mb-6">Our Vision</h2>
+              </div>
+              <div 
+                ref={visionBody.ref}
+                style={{ 
+                  opacity: visionBody.opacity,
+                  transform: `translateX(${visionBody.translateX}px)`,
+                  transition: 'opacity 0.6s ease-out, transform 0.6s ease-out'
                 }}
               >
                 <p className="text-lg text-muted-foreground leading-relaxed">
@@ -148,13 +170,22 @@ const About = () => {
         <div className="container mx-auto px-6">
           <div>
             <div className="text-center mb-16">
-              <h2 className="text-bravura-lg mb-6">Our Core Values</h2>
               <div 
-                ref={valuesReveal.ref}
+                ref={valuesHeadline.ref}
                 style={{ 
-                  opacity: valuesReveal.opacity,
-                  transform: `translateY(${valuesReveal.translateY}px)`,
-                  transition: 'opacity 0.3s ease-out, transform 0.3s ease-out'
+                  opacity: valuesHeadline.opacity,
+                  transform: `translateX(${valuesHeadline.translateX}px)`,
+                  transition: 'opacity 0.6s ease-out, transform 0.6s ease-out'
+                }}
+              >
+                <h2 className="text-bravura-lg mb-6">Our Core Values</h2>
+              </div>
+              <div 
+                ref={valuesBody.ref}
+                style={{ 
+                  opacity: valuesBody.opacity,
+                  transform: `translateX(${valuesBody.translateX}px)`,
+                  transition: 'opacity 0.6s ease-out, transform 0.6s ease-out'
                 }}
               >
                 <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -164,10 +195,11 @@ const About = () => {
             </div>
           
             <div 
+              ref={valuesBody.ref}
               style={{ 
-                opacity: valuesReveal.opacity,
-                transform: `translateY(${valuesReveal.translateY}px)`,
-                transition: 'opacity 0.3s ease-out, transform 0.3s ease-out'
+                opacity: valuesBody.opacity,
+                transform: `translateX(${valuesBody.translateX}px)`,
+                transition: 'opacity 0.6s ease-out, transform 0.6s ease-out'
               }}
               className="grid grid-cols-1 md:grid-cols-2 gap-8"
             >
