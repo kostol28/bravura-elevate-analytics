@@ -212,44 +212,6 @@ const Services = () => {
         </div>
       </section>
 
-      {/* ROI Section */}
-      <section className="py-24 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-bravura-lg mb-6">Measurable Business Impact</h2>
-            <p className="text-xl opacity-90 max-w-3xl mx-auto">
-              Our clients consistently achieve significant returns on their analytics investments
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            <div className="text-center space-y-4">
-              <div className="text-5xl font-bold text-gold">40%</div>
-              <div className="text-lg">Average Cost Reduction</div>
-              <div className="text-sm opacity-80">Through process optimization and automation</div>
-            </div>
-            <div className="text-center space-y-4">
-              <div className="text-5xl font-bold text-gold">6x</div>
-              <div className="text-lg">Faster Decision Making</div>
-              <div className="text-sm opacity-80">With real-time insights and dashboards</div>
-            </div>
-            <div className="text-center space-y-4">
-              <div className="text-5xl font-bold text-gold">25%</div>
-              <div className="text-lg">Revenue Growth</div>
-              <div className="text-sm opacity-80">From data-driven strategic initiatives</div>
-            </div>
-          </div>
-          
-          <div className="text-center">
-            <Button size="lg" className="btn-gold text-lg px-10 py-4 mr-4">
-              Request ROI Analysis
-            </Button>
-            <Button variant="outline" size="lg" className="text-lg px-10 py-4 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-              View Case Studies
-            </Button>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };
