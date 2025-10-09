@@ -322,12 +322,6 @@ const Contact = () => {
                   </div>
                 </CardContent>
               </Card>
-
-              <div className="text-center">
-                <Button size="lg" className="btn-gold w-full text-lg py-4">
-                  Schedule Video Call
-                </Button>
-              </div>
             </div>
           </div>
         </div>
