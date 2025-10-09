@@ -1,47 +1,9 @@
-import { useEffect, useRef, useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Shield, Award, Users, Target, Globe, Zap } from "lucide-react";
 
-
-const useScrollReveal = (direction: 'left' | 'right') => {
-  const [opacity, setOpacity] = useState(0);
-  const [translateX, setTranslateX] = useState(direction === 'left' ? -100 : 100);
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (ref.current) {
-        const rect = ref.current.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-        const elementTop = rect.top;
-        
-        // Calculate progress (0 to 1) based on element position
-        const progress = Math.max(0, Math.min(1, (windowHeight - elementTop) / (windowHeight * 0.5)));
-        
-        setOpacity(progress);
-        const baseOffset = direction === 'left' ? -100 : 100;
-        setTranslateX(baseOffset * (1 - progress));
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Initial call
-
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [direction]);
-
-  return { ref, opacity, translateX };
-};
-
 const About = () => {
-  const missionHeadline = useScrollReveal('left');
-  const missionBody = useScrollReveal('right');
-  const visionHeadline = useScrollReveal('left');
-  const visionBody = useScrollReveal('right');
-  const valuesHeadline = useScrollReveal('left');
-  const valuesBody = useScrollReveal('right');
 
   const values = [
     {
@@ -110,56 +72,20 @@ const About = () => {
         <div className="container mx-auto px-6">
           <div className="space-y-16 max-w-4xl mx-auto text-center">
             <div>
-              <div 
-                ref={missionHeadline.ref}
-                style={{ 
-                  opacity: missionHeadline.opacity,
-                  transform: `translateX(${missionHeadline.translateX}px)`,
-                  transition: 'opacity 0.6s ease-out, transform 0.6s ease-out'
-                }}
-              >
-                <h2 className="text-bravura-lg mb-6">Our Mission</h2>
-              </div>
-              <div 
-                ref={missionBody.ref}
-                style={{ 
-                  opacity: missionBody.opacity,
-                  transform: `translateX(${missionBody.translateX}px)`,
-                  transition: 'opacity 0.6s ease-out, transform 0.6s ease-out'
-                }}
-              >
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  To make advanced analytics accessible for growing businesses, providing clear insights 
-                  and practical solutions that drive real business value without the complexity 
-                  typically associated with enterprise data science.
-                </p>
-              </div>
+              <h2 className="text-bravura-lg mb-6">Our Mission</h2>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                To make advanced analytics accessible for growing businesses, providing clear insights 
+                and practical solutions that drive real business value without the complexity 
+                typically associated with enterprise data science.
+              </p>
             </div>
             
             <div>
-              <div 
-                ref={visionHeadline.ref}
-                style={{ 
-                  opacity: visionHeadline.opacity,
-                  transform: `translateX(${visionHeadline.translateX}px)`,
-                  transition: 'opacity 0.6s ease-out, transform 0.6s ease-out'
-                }}
-              >
-                <h2 className="text-bravura-lg mb-6">Our Vision</h2>
-              </div>
-              <div 
-                ref={visionBody.ref}
-                style={{ 
-                  opacity: visionBody.opacity,
-                  transform: `translateX(${visionBody.translateX}px)`,
-                  transition: 'opacity 0.6s ease-out, transform 0.6s ease-out'
-                }}
-              >
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  A future where every business, regardless of size, can make confident data-driven 
-                  decisions that fuel growth and create lasting competitive advantages.
-                </p>
-              </div>
+              <h2 className="text-bravura-lg mb-6">Our Vision</h2>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                A future where every business, regardless of size, can make confident data-driven 
+                decisions that fuel growth and create lasting competitive advantages.
+              </p>
             </div>
           </div>
         </div>
@@ -170,39 +96,13 @@ const About = () => {
         <div className="container mx-auto px-6">
           <div>
             <div className="text-center mb-16">
-              <div 
-                ref={valuesHeadline.ref}
-                style={{ 
-                  opacity: valuesHeadline.opacity,
-                  transform: `translateX(${valuesHeadline.translateX}px)`,
-                  transition: 'opacity 0.6s ease-out, transform 0.6s ease-out'
-                }}
-              >
-                <h2 className="text-bravura-lg mb-6">Our Core Values</h2>
-              </div>
-              <div 
-                ref={valuesBody.ref}
-                style={{ 
-                  opacity: valuesBody.opacity,
-                  transform: `translateX(${valuesBody.translateX}px)`,
-                  transition: 'opacity 0.6s ease-out, transform 0.6s ease-out'
-                }}
-              >
-                <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                  The principles that guide every decision, every solution, and every client relationship
-                </p>
-              </div>
+              <h2 className="text-bravura-lg mb-6">Our Core Values</h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                The principles that guide every decision, every solution, and every client relationship
+              </p>
             </div>
           
-            <div 
-              ref={valuesBody.ref}
-              style={{ 
-                opacity: valuesBody.opacity,
-                transform: `translateX(${valuesBody.translateX}px)`,
-                transition: 'opacity 0.6s ease-out, transform 0.6s ease-out'
-              }}
-              className="grid grid-cols-1 md:grid-cols-2 gap-8"
-            >
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {values.map((value, index) => (
                 <Card key={index} className="card-lotus relative z-10">
                   <CardHeader>
