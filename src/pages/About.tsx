@@ -57,7 +57,7 @@ const About = () => {
             </Badge>
             
             <h1 className="text-bravura-xl leading-tight">
-              Data Expertise, Delivered with Clarity
+              <span className="bg-gradient-lotus bg-clip-text text-transparent">Data Expertise, Delivered with Clarity</span>
             </h1>
             
             <p className="text-xl text-muted-foreground leading-relaxed">
