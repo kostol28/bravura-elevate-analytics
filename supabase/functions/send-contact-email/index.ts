@@ -76,8 +76,6 @@ ${message}
       content: emailBody,
     });
 
-    await client.close();
-
     console.log("Email sent successfully to contact@bravura.works");
 
     return new Response(
