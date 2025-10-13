@@ -56,7 +56,6 @@ const Contact = () => {
       <section className="py-24 bg-gradient-subtle">
         <div className="container mx-auto px-6 text-center">
           <div className="max-w-4xl mx-auto space-y-8">
-
             <h1 className="text-bravura-xl leading-tight">
               Start Your Data Transformation
               <span className="bg-gradient-lotus bg-clip-text text-transparent"> Journey Today</span>
@@ -269,7 +268,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <div className="font-medium">Enterprise Sales</div>
-                      <div className="text-sm text-muted-foreground">enterprise@bravura.com</div>
+                      <div className="text-sm text-muted-foreground">bravura.dataworks@gmail.com</div>
                     </div>
                   </div>
 
