@@ -65,7 +65,7 @@ const Header = () => {
               Contact
             </NavLink>
             <Button className="btn-gold">
-              Book Consultation
+              Book a Consultation
             </Button>
           </div>
 
@@ -112,7 +112,7 @@ const Header = () => {
             </NavLink>
             <div className="pt-4">
               <Button className="btn-gold w-full">
-                Book Consultation
+                Book a Consultation
               </Button>
             </div>
           </div>
