@@ -268,7 +268,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <div className="font-medium">Enterprise Sales</div>
-                      <div className="text-sm text-muted-foreground">bravura.dataworks@gmail.com</div>
+                      <div className="text-sm text-muted-foreground">enterprise@bravura.com</div>
                     </div>
                   </div>
 
@@ -281,7 +281,7 @@ const Contact = () => {
                       <div className="text-sm text-muted-foreground">
                         123 Data Drive
                         <br />
-                        San Francisco, CA 94105
+                        Milwauke, WI
                       </div>
                     </div>
                   </div>
