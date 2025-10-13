@@ -256,10 +256,6 @@ const Contact = () => {
                     <div className="w-10 h-10 bg-gradient-lotus rounded-2xl flex items-center justify-center relative z-10">
                       <Phone className="w-5 h-5 text-primary-foreground" />
                     </div>
-                    <div>
-                      <div className="font-medium">Enterprise Hotline</div>
-                      <div className="text-sm text-muted-foreground">+1 (555) 123-4567</div>
-                    </div>
                   </div>
 
                   <div className="flex items-center space-x-3">
@@ -278,11 +274,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <div className="font-medium">Headquarters</div>
-                      <div className="text-sm text-muted-foreground">
-                        123 Data Drive
-                        <br />
-                        Milwauke, WI
-                      </div>
+                      <div className="text-sm text-muted-foreground">Milwaukee, WI</div>
                     </div>
                   </div>
 
