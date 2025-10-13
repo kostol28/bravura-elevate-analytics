@@ -75,7 +75,7 @@ const Contact = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Contact Form */}
             <div className="lg:col-span-2">
-              <Card className="card-lotus relative z-10">
+              <Card className="relative z-10">
                 <CardHeader>
                   <CardTitle className="text-2xl">Enterprise Inquiry Form</CardTitle>
                   <CardDescription className="text-base">
