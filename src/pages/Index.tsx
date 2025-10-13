@@ -72,9 +72,6 @@ const Index = () => {
         />
         <div className="relative container mx-auto px-6 text-center z-10">
           <div className="max-w-4xl mx-auto space-y-8 animate-fade-in-up">
-            <Badge variant="secondary" className="px-6 py-2 text-sm font-medium">
-              Data-Driven Solutions for Growing Businesses
-            </Badge>
             
             <h1 className="text-bravura-xl leading-tight">
               Transform Your Data Into 
