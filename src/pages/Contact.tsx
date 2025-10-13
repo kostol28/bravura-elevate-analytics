@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { MapPin, Phone, Mail, Clock, Shield, Users } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -24,26 +25,53 @@ const Contact = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Thank you for your inquiry!",
-      description: "Our enterprise team will contact you within 24 hours to discuss your project.",
-    });
-    // Reset form
-    setFormData({
-      firstName: "",
-      lastName: "",
-      email: "",
-      company: "",
-      title: "",
-      phone: "",
-      industry: "",
-      projectType: "",
-      budget: "",
-      timeline: "",
-      message: "",
-    });
+    
+    try {
+      const { error } = await supabase.functions.invoke("send-contact-email", {
+        body: {
+          name: `${formData.firstName} ${formData.lastName}`,
+          email: formData.email,
+          company: formData.company,
+          phone: formData.phone,
+          industry: formData.industry,
+          projectType: formData.projectType,
+          budget: formData.budget,
+          timeline: formData.timeline,
+          message: formData.message,
+        },
+      });
+
+      if (error) throw error;
+
+      toast({
+        title: "Thank you for your inquiry!",
+        description: "Our enterprise team will contact you within 24 hours to discuss your project.",
+      });
+
+      // Reset form
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        company: "",
+        title: "",
+        phone: "",
+        industry: "",
+        projectType: "",
+        budget: "",
+        timeline: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error("Error sending contact email:", error);
+      toast({
+        title: "Error",
+        description: "Failed to send your inquiry. Please try again or email us directly at contact@bravura.works",
+        variant: "destructive",
+      });
+    }
   };
 
   const handleInputChange = (field: string, value: string) => {
