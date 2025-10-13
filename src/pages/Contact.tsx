@@ -202,6 +202,7 @@ const Contact = () => {
                             <SelectItem value="10k-30k">$10k - $30k</SelectItem>
                             <SelectItem value="30k-50k">$30k - $50k</SelectItem>
                             <SelectItem value="50k+">$50k+</SelectItem>
+                            <SelectItem value="discuss">Prefer to Discuss</SelectItem>
                           </SelectContent>
                         </Select>
                       </div>
