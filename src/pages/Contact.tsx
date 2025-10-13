@@ -5,7 +5,6 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Badge } from "@/components/ui/badge";
 import { MapPin, Phone, Mail, Clock, Shield, Users } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -57,9 +56,6 @@ const Contact = () => {
       <section className="py-24 bg-gradient-subtle">
         <div className="container mx-auto px-6 text-center">
           <div className="max-w-4xl mx-auto space-y-8">
-            <Badge variant="secondary" className="px-6 py-2 text-sm font-medium">
-              Enterprise Contact
-            </Badge>
 
             <h1 className="text-bravura-xl leading-tight">
               Start Your Data Transformation

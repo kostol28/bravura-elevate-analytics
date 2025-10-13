@@ -1,5 +1,4 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Database, BarChart3, Brain, Shield, Cloud, Cog, Building, Heart, ShoppingBag, Banknote, Factory, Plane } from "lucide-react";
 
@@ -91,9 +90,6 @@ const Services = () => {
       <section className="py-24 bg-gradient-subtle">
         <div className="container mx-auto px-6 text-center">
           <div className="max-w-4xl mx-auto space-y-8">
-            <Badge variant="secondary" className="px-6 py-2 text-sm font-medium">
-              Enterprise Analytics Services
-            </Badge>
             
             <h1 className="text-bravura-xl leading-tight">
               Comprehensive Data Solutions for 

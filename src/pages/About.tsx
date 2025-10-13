@@ -1,5 +1,4 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Shield, Award, Users, Target, Globe, Zap } from "lucide-react";
 
@@ -42,9 +41,6 @@ const About = () => {
       <section className="py-24 bg-gradient-subtle">
         <div className="container mx-auto px-6 text-center">
           <div className="max-w-4xl mx-auto space-y-8">
-            <Badge variant="secondary" className="px-6 py-2 text-sm font-medium">
-              About Bravura Data Works
-            </Badge>
             
             <h1 className="text-bravura-xl leading-tight">
               <span className="bg-gradient-lotus bg-clip-text text-transparent">Data Expertise, Delivered with Clarity</span>

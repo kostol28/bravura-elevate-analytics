@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { BarChart3, Zap, Users, Globe, TrendingUp, Database } from "lucide-react";
 import lotusPattern from "@/assets/lotus-pattern.svg";
