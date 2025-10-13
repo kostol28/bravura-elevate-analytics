@@ -11,6 +11,7 @@ import { supabase } from "@/integrations/supabase/client";
 
 const Contact = () => {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -27,6 +28,7 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
     
     try {
       const { error } = await supabase.functions.invoke("send-contact-email", {
@@ -46,8 +48,9 @@ const Contact = () => {
       if (error) throw error;
 
       toast({
-        title: "Thank you for your inquiry!",
+        title: "✓ Message Sent Successfully!",
         description: "Our enterprise team will contact you within 24 hours to discuss your project.",
+        duration: 5000,
       });
 
       // Reset form
@@ -67,10 +70,12 @@ const Contact = () => {
     } catch (error) {
       console.error("Error sending contact email:", error);
       toast({
-        title: "Error",
+        title: "Error Sending Message",
         description: "Failed to send your inquiry. Please try again or email us directly at contact@bravura.works",
         variant: "destructive",
       });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -264,9 +269,20 @@ const Contact = () => {
                       />
                     </div>
 
-                    <Button type="submit" size="lg" className="btn-gold w-full text-lg py-4">
-                      Submit Inquiry
+                    <Button 
+                      type="submit" 
+                      size="lg" 
+                      className="btn-gold w-full text-lg py-4"
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? "Sending..." : "Submit Inquiry"}
                     </Button>
+                    
+                    {isSubmitting && (
+                      <p className="text-sm text-muted-foreground text-center">
+                        Please wait while we process your submission...
+                      </p>
+                    )}
                   </form>
                 </CardContent>
               </Card>
