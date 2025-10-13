@@ -254,12 +254,6 @@ const Contact = () => {
                 <CardContent className="space-y-6 relative z-10">
                   <div className="flex items-center space-x-3">
                     <div className="w-10 h-10 bg-gradient-lotus rounded-2xl flex items-center justify-center relative z-10">
-                      <Phone className="w-5 h-5 text-primary-foreground" />
-                    </div>
-                  </div>
-
-                  <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-gradient-lotus rounded-2xl flex items-center justify-center relative z-10">
                       <Mail className="w-5 h-5 text-primary-foreground" />
                     </div>
                     <div>
