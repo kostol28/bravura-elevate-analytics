@@ -48,10 +48,6 @@ const handler = async (req: Request): Promise<Response> => {
           password: Deno.env.get("ZOHO_SMTP_PASS")!,
         },
       },
-      pool: {
-        size: 1,
-        timeout: 10000,
-      },
     });
 
     const emailBody = `
@@ -73,30 +69,29 @@ Message:
 ${message}
     `.trim();
 
-    try {
-      await client.send({
-        from: Deno.env.get("ZOHO_SMTP_USER")!,
-        to: "contact@bravura.works",
-        subject: `New Contact Form Submission from ${name}`,
-        content: emailBody,
-      });
-
+    // Send email without waiting for completion to avoid timeout
+    client.send({
+      from: Deno.env.get("ZOHO_SMTP_USER")!,
+      to: "contact@bravura.works",
+      subject: `New Contact Form Submission from ${name}`,
+      content: emailBody,
+    }).then(() => {
       console.log("Email sent successfully to contact@bravura.works");
+    }).catch((err) => {
+      console.error("Email send error:", err);
+    });
 
-      return new Response(
-        JSON.stringify({ success: true, message: "Email sent successfully" }),
-        {
-          status: 200,
-          headers: {
-            "Content-Type": "application/json",
-            ...corsHeaders,
-          },
-        }
-      );
-    } catch (emailError: any) {
-      console.error("SMTP send error:", emailError);
-      throw emailError;
-    }
+    // Return immediately
+    return new Response(
+      JSON.stringify({ success: true, message: "Email sent successfully" }),
+      {
+        status: 200,
+        headers: {
+          "Content-Type": "application/json",
+          ...corsHeaders,
+        },
+      }
+    );
   } catch (error: any) {
     console.error("Error sending email:", error);
     return new Response(
