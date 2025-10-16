@@ -170,12 +170,6 @@ const About = () => {
               </div>
             ))}
           </div>
-          
-          <div className="text-center mt-16">
-            <Button size="lg" className="btn-gold text-lg px-10 py-4">
-              Schedule a Discovery Call
-            </Button>
-          </div>
         </div>
       </section>
     </div>
