@@ -49,12 +49,6 @@ const Footer = () => {
                 Services
               </NavLink>
               <NavLink 
-                to="/insights" 
-                className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm"
-              >
-                Insights
-              </NavLink>
-              <NavLink 
                 to="/contact" 
                 className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm"
               >

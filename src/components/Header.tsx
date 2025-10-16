@@ -64,8 +64,8 @@ const Header = () => {
             >
               Contact
             </NavLink>
-            <Button className="btn-gold">
-              Book a Consultation
+            <Button className="btn-gold" asChild>
+              <a href="/contact">Book a Consultation</a>
             </Button>
           </div>
 
@@ -111,8 +111,8 @@ const Header = () => {
               Contact
             </NavLink>
             <div className="pt-4">
-              <Button className="btn-gold w-full">
-                Book a Consultation
+              <Button className="btn-gold w-full" asChild>
+                <a href="/contact">Book a Consultation</a>
               </Button>
             </div>
           </div>

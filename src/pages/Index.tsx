@@ -85,8 +85,8 @@ const Index = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" className="btn-gold text-lg px-10 py-4">
-                Book a Consultation
+              <Button size="lg" className="btn-gold text-lg px-10 py-4" asChild>
+                <a href="/contact">Book a Consultation</a>
               </Button>
             </div>
           </div>
@@ -148,8 +148,8 @@ const Index = () => {
               Join growing businesses who trust Bravura Data Works 
               to deliver professional analytics solutions with reliable security and expert guidance.
             </p>
-            <Button size="lg" className="btn-gold text-lg px-10 py-4">
-              Schedule Discovery Call
+            <Button size="lg" className="btn-gold text-lg px-10 py-4" asChild>
+              <a href="/contact">Schedule Discovery Call</a>
             </Button>
           </div>
         </div>
