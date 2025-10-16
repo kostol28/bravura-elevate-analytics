@@ -49,7 +49,7 @@ const Contact = () => {
 
       toast({
         title: "✓ Message Sent Successfully!",
-        description: "Our enterprise team will contact you within 24 hours to discuss your project.",
+        description: "Our enterprise team will contact you within 24 hours.",
         duration: 5000,
       });
 

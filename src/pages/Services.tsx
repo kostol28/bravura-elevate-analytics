@@ -121,10 +121,6 @@ const Services = () => {
               From strategic consulting to full-scale implementation, we deliver end-to-end analytics solutions that
               transform how businesses leverage their data assets for growth.
             </p>
-
-            <Button size="lg" className="btn-gold text-lg px-10 py-4">
-              Discuss Your Project
-            </Button>
           </div>
         </div>
       </section>
