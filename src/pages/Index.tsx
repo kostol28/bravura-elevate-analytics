@@ -83,12 +83,6 @@ const Index = () => {
             <p className="text-xl font-bold max-w-2xl mx-auto animate-shine">
               Streamline. Optimize. Modernize.
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" className="btn-gold text-lg px-10 py-4" asChild>
-                <a href="/contact">Book a Consultation</a>
-              </Button>
-            </div>
           </div>
         </div>
       </section>
