@@ -74,7 +74,7 @@ const Footer = () => {
             <h3 className="text-lg font-semibold">Contact Us</h3>
             <div className="space-y-2 text-sm text-primary-foreground/80">
               <div>info@bravura.com</div>
-              <div>+1 (555) 123-4567</div>
+              <div>+1 (262) 672-1223</div>
             </div>
           </div>
         </div>
